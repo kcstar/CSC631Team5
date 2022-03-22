@@ -85,7 +85,6 @@ public class GameClient implements Runnable {
                     DataInputStream dataInput = new DataInputStream(new ByteArrayInputStream(buffer));
                     // Extract the request code number
                     requestCode = DataReader.readShort(dataInput);
-                    System.out.println("Incoming request | Request code: " + requestCode); // debug
                     // Determine the type of request
                     GameRequest request = GameRequestTable.get(requestCode);
                     // If the request exists, process like following:
