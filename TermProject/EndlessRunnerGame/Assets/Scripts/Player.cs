@@ -53,4 +53,11 @@ public class Player : MonoBehaviour
         }
     }
 
+    public void OnCollisionEnter(Collision node) {
+        Debug.Log("Collision Object: " + node.gameObject.tag);
+        if (node.gameObject.tag == "Coin") {
+            Destroy(node.gameObject);
+        }
+    }
+
 }
