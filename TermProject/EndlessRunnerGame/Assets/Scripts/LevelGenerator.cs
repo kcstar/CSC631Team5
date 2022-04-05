@@ -5,6 +5,8 @@ using UnityEngine;
 public class LevelGenerator : MonoBehaviour
 {
     [SerializeField] private Transform level_1;
+    [SerializeField] private Transform level_2;
+    [SerializeField] private Transform level_3;
     [SerializeField] private Transform level_start;
     private Vector3 lastEndPosition;
     private const float PLAYER_DISTANCE_SPAWN_LEVEL = 15f;
@@ -31,7 +33,34 @@ public class LevelGenerator : MonoBehaviour
     }
     private Transform spawnLevel(Vector3 spawnPosition)
     {
-        Transform levelPartTransform = Instantiate(level_1, spawnPosition, Quaternion.identity);
+        Transform levelPartTransform;
+        Transform selectedLevel;
+        int rand = Random.Range(1, 4);
+
+        switch (rand)
+        {
+          case 1:
+            Debug.Log($"Spawning level {rand} prefab...");
+            selectedLevel = level_1;
+            break;
+          
+          case 2:
+            Debug.Log($"Spawning level {rand} prefab...");
+            selectedLevel = level_2;
+            break;
+          
+          case 3:
+            Debug.Log($"Spawning level {rand} prefab...");
+            selectedLevel = level_3;
+            break;
+          
+          default:
+            Debug.Log("Spawning level 1 prefab...");
+            selectedLevel = level_1;
+            break;
+        }
+        
+        levelPartTransform = Instantiate(selectedLevel, spawnPosition, Quaternion.identity);
         return levelPartTransform;
     }
 }
