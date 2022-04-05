@@ -15,49 +15,59 @@ public class Player : MonoBehaviour
     void Start()
     {
         rigidBodyComponent = GetComponent<Rigidbody>();
+        Physics.gravity = new Vector3(0, -15.0F, 0);
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Space)){
+        if (Input.GetKeyDown(KeyCode.Space)){
             jumpKeyWasPressed = true;
         }
-        horizontalInput = Input.GetAxis("Horizontal"); 
+
+        horizontalInput = Input.GetAxis("Horizontal") * 3.0f; 
     }
     
     private void FixedUpdate()
     {
         rigidBodyComponent.velocity = new Vector3(horizontalInput, rigidBodyComponent.velocity.y, 0);
 
-        if(Physics.OverlapSphere(groundCheckTransform.position, 0.1f, playerMask).Length == 0){
+        if (Physics.OverlapSphere(groundCheckTransform.position, 0.3f, playerMask).Length == 0)
+        {
             return;
         }
 
-        if(jumpKeyWasPressed){
-            float jumpPower = 5f;
-            if(superJumpsRemaining > 0){
+        if (jumpKeyWasPressed)
+        {
+            float jumpPower = 6f;
+            if (superJumpsRemaining > 0)
+            {
                 jumpPower *= 2;
                 superJumpsRemaining--;
             }
+
             rigidBodyComponent.AddForce(Vector3.up * jumpPower, ForceMode.VelocityChange);
             jumpKeyWasPressed = false;
         }
 
     }
 
-    private void onTriggerEnter(Collider other){
-        if(other.gameObject.layer == 9){
+    private void onTriggerEnter(Collider other)
+    {
+        if (other.gameObject.layer == 9)
+        {
             Destroy(other.gameObject);
             superJumpsRemaining++;
         }
     }
 
-    public void OnCollisionEnter(Collision node) {
+    public void OnCollisionEnter(Collision node)
+    {
         Debug.Log("Collision Object: " + node.gameObject.tag);
-        if (node.gameObject.tag == "Coin") {
+
+        if (node.gameObject.tag == "Coin")
+        {
             Destroy(node.gameObject);
         }
     }
-
 }
