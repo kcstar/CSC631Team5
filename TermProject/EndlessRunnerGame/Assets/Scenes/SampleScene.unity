@@ -157,6 +157,8 @@ MonoBehaviour:
   - {fileID: 1401532974015555114, guid: 500a40ec3590adb4f943ab56edfd9464, type: 3}
   - {fileID: 2581508423554040681, guid: 2a8149533cc53634b95fb4463d4a6d7e, type: 3}
   - {fileID: 3801337090150634599, guid: fe9d68a51158eeb4493ebb7ca25d437c, type: 3}
+  - {fileID: 6276411869201068894, guid: 880e08c5c04a2144fadac9144470070a, type: 3}
+  - {fileID: 1155158789113866106, guid: a527d58b4b302cd4183b8b93b41c60b0, type: 3}
   level_start: {fileID: 275647634}
 --- !u!4 &71238621
 Transform:
