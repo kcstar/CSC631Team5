@@ -9,20 +9,17 @@ public class Constants {
 	final public static String REMOTE_HOST = "localhost";
     final public static int REMOTE_PORT = 9252;
     final public static int TIMEOUT_SECONDS = 3;
+	final public static int MAX_PLAYERS = 4;
     
     // Request (1xx) + Response (2xx)
 	final public static short CMSG_JOIN = 101;
 	final public static short SMSG_JOIN = 201;
 	final public static short CMSG_LEAVE = 102;
 	final public static short SMSG_LEAVE = 202;
-	final public static short CMSG_SETNAME = 103;
-	final public static short SMSG_SETNAME = 203;
-	final public static short CMSG_READY = 104;
-	final public static short SMSG_READY = 204;
-	final public static short CMSG_MOVE = 105;
-	final public static short SMSG_MOVE = 205;
-	final public static short CMSG_INTERACT = 106;
-	final public static short SMSG_INTERACT = 206;
+	final public static short CMSG_MOVE = 103;
+	final public static short SMSG_MOVE = 203;
+	final public static short CMSG_JUMP = 104;
+	final public static short SMSG_JUMP = 204;
 
 	final public static short CMSG_HEARTBEAT = 111;
 

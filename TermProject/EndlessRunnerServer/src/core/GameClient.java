@@ -17,8 +17,10 @@ import metadata.GameRequestTable;
 import model.Player;
 import networking.request.GameRequest;
 import networking.response.GameResponse;
+import networking.response.ResponseLeave;
 import utility.DataReader;
 import utility.Log;
+import core.NetworkManager;
 
 /**
  * The GameClient class is an extension of the Thread class that represents an
@@ -78,6 +80,7 @@ public class GameClient implements Runnable {
                 short requestLength = DataReader.readShort(dataInputStream);
 
                 if (requestLength > 0) {
+
                     lastActivity = System.currentTimeMillis();
                     // Separate the remaining package from the data stream
                     byte[] buffer = new byte[requestLength];
@@ -120,6 +123,11 @@ public class GameClient implements Runnable {
                 ex.printStackTrace();
             }
         }
+
+        ResponseLeave responseLeave = new ResponseLeave();
+        responseLeave.setPlayer(player);
+        NetworkManager.addResponseForAllOnlinePlayers(player.getID(), responseLeave);
+        System.out.println("Player disconnected! Adding response");
 
         if (player != null) {
             removePlayerData();
