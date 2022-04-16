@@ -12,7 +12,8 @@ public class ResponseMoveEventArgs : ExtendedEventArgs
 	public float velY { get; set; }
 	public float velZ { get; set; }
 	public float walkSpeed { get; set; }
-	public float walkDir { get; set; }
+	public float walkX { get; set; }
+	public float walkZ { get; set; }
 	public bool jumping { get; set; }
 
 	public ResponseMoveEventArgs()
@@ -31,7 +32,8 @@ public class ResponseMove : NetworkResponse
 	private float velY;
 	private float velZ;
 	private float walkSpeed;
-	private float walkDir;
+	private float walkX;
+	private float walkZ;
 	private bool jumping;
 
 	public ResponseMove()
@@ -48,7 +50,8 @@ public class ResponseMove : NetworkResponse
 		velY = DataReader.ReadFloat(dataStream);
 		velZ = DataReader.ReadFloat(dataStream);
 		walkSpeed = DataReader.ReadFloat(dataStream);
-		walkDir = DataReader.ReadFloat(dataStream);
+		walkX = DataReader.ReadFloat(dataStream);
+		walkZ = DataReader.ReadFloat(dataStream);
 		jumping = DataReader.ReadBool(dataStream);
 	}
 
@@ -64,7 +67,8 @@ public class ResponseMove : NetworkResponse
 			velY = velY,
 			velZ = velZ,
 			walkSpeed = walkSpeed,
-			walkDir = walkDir,
+			walkX = walkX,
+			walkZ = walkZ,
 			jumping = jumping
 		};
 

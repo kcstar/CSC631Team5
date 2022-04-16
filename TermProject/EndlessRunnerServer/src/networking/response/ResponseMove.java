@@ -18,7 +18,8 @@ public class ResponseMove extends GameResponse {
     private float velY;
     private float velZ;
     private float walkSpeed;
-    private float walkDir;
+    private float walkX;
+    private float walkZ;
     private boolean jumping;
 
     public ResponseMove() {
@@ -36,7 +37,8 @@ public class ResponseMove extends GameResponse {
         packet.addFloat(velY);
         packet.addFloat(velZ);
         packet.addFloat(walkSpeed);
-        packet.addFloat(walkDir);
+        packet.addFloat(walkX);
+        packet.addFloat(walkZ);
         packet.addBoolean(jumping);
  
         return packet.getBytes();
@@ -46,7 +48,7 @@ public class ResponseMove extends GameResponse {
         this.player = player;
     }
 
-    public void setData(float posX, float posY, float posZ, float velX, float velY, float velZ, float walkSpeed, float walkDir, boolean jumping) {
+    public void setData(float posX, float posY, float posZ, float velX, float velY, float velZ, float walkSpeed, float walkX, float walkZ, boolean jumping) {
         this.posX = posX;
         this.posY = posY;;
         this.posZ = posZ;
@@ -54,7 +56,8 @@ public class ResponseMove extends GameResponse {
         this.velY = velY;
         this.velZ = velZ;
         this.walkSpeed = walkSpeed;
-        this.walkDir = walkDir;
+        this.walkX = walkX;
+        this.walkZ = walkZ;
         this.jumping = jumping;
     }
 }

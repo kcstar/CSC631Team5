@@ -57,12 +57,12 @@ public class NetworkManager : MonoBehaviour
 		return false;
 	}
 
-	public bool SendMoveRequest(float posX, float posY, float posZ, float velX, float velY, float velZ, float walkSpeed, float walkDir, bool jumping)
+	public bool SendMoveRequest(float posX, float posY, float posZ, float velX, float velY, float velZ, float walkSpeed, float walkX, float walkZ, bool jumping)
 	{
 		if (cManager && cManager.IsConnected())
 		{
 			RequestMove request = new RequestMove();
-			request.send(posX, posY, posZ, velX, velY, velZ, walkSpeed, walkDir, jumping);
+			request.send(posX, posY, posZ, velX, velY, velZ, walkSpeed, walkX, walkZ, jumping);
 			cManager.send(request);
 			return true;
 		}

@@ -43,7 +43,7 @@ public class PlayerControl : MonoBehaviour
 
         double currentTime = Time.realtimeSinceStartup;
         if (currentTime - lastMoveRequest > MOVE_REQUEST_FREQUENCY || movementChanged) {
-		    networkManager.SendMoveRequest(humanoid.position.x, humanoid.position.y, humanoid.position.z, humanoid.velocity.x, humanoid.velocity.y, humanoid.velocity.z, humanoid.walkSpeed, Input.GetAxis("Horizontal"), humanoid.jumping);
+		    networkManager.SendMoveRequest(humanoid.position.x, humanoid.position.y, humanoid.position.z, humanoid.velocity.x, humanoid.velocity.y, humanoid.velocity.z, humanoid.walkSpeed, Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"), humanoid.jumping);
             lastMoveRequest = currentTime;
             movementChanged = false;
         }

@@ -58,7 +58,6 @@ public class GameManager : MonoBehaviour
 
     public void OnResponseMove(ExtendedEventArgs eventArgs) {
         ResponseMoveEventArgs args = eventArgs as ResponseMoveEventArgs;
-        Debug.Log(args.walkSpeed + " " + args.walkDir + " " + args.jumping);
         if (args.user_id != userId) {
             GameObject playerObject = players[args.user_id];
             if (playerObject != null) {
@@ -67,7 +66,7 @@ public class GameManager : MonoBehaviour
                 playerScript.position = new Vector3(args.posX, args.posY, args.posZ);
                 playerScript.velocity = new Vector3(args.velX, args.velY, args.velZ);
                 playerScript.walkSpeed = args.walkSpeed;
-                playerScript.MoveDirection = new Vector3(args.walkDir, 0, 0);
+                playerScript.MoveDirection = new Vector3(args.walkX, 0, args.walkZ);
                 playerScript.jumping = args.jumping;
             }
         }

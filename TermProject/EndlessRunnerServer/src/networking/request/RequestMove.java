@@ -10,7 +10,7 @@ import utility.DataReader;
 import core.NetworkManager;
 
 public class RequestMove extends GameRequest {
-    private float posX, posY, posZ, velX, velY, velZ, walkSpeed, walkDir;
+    private float posX, posY, posZ, velX, velY, velZ, walkSpeed, walkX, walkZ;
     private boolean jumping;
     // Responses
     private ResponseMove responseMove;
@@ -28,7 +28,8 @@ public class RequestMove extends GameRequest {
         velY = DataReader.readFloat(dataInput);
         velZ = DataReader.readFloat(dataInput);
         walkSpeed = DataReader.readFloat(dataInput);
-        walkDir = DataReader.readFloat(dataInput);
+        walkX = DataReader.readFloat(dataInput);
+        walkZ = DataReader.readFloat(dataInput);
         jumping = DataReader.readBoolean(dataInput);
     }
 
@@ -37,7 +38,7 @@ public class RequestMove extends GameRequest {
         Player player = client.getPlayer();
 
         responseMove.setPlayer(player);
-        responseMove.setData(posX, posY, posZ, velX, velY, velZ, walkSpeed, walkDir, jumping);
+        responseMove.setData(posX, posY, posZ, velX, velY, velZ, walkSpeed, walkX, walkZ, jumping);
         NetworkManager.addResponseForAllOnlinePlayers(player.getID(), responseMove);
     }
 }
