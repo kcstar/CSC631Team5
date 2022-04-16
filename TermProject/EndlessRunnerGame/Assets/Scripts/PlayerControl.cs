@@ -7,6 +7,7 @@ using UnityEngine;
 
 public class PlayerControl : MonoBehaviour
 {
+    private Vector3 spawnPos;
     private float horizontalInput;
     private int superJumpsRemaining;
 	private NetworkManager networkManager;
@@ -16,9 +17,11 @@ public class PlayerControl : MonoBehaviour
     private double lastMoveRequest = 0;
     private double MOVE_REQUEST_FREQUENCY = 0.2;
     private bool movementChanged = false;
+    public float respawnHeight;
 
     void Start()
     {
+        spawnPos = gameObject.transform.position;
 		networkManager = GameObject.Find("Network Manager").GetComponent<NetworkManager>();
         humanoid = gameObject.GetComponent<Player>();
 		DontDestroyOnLoad(gameObject);
@@ -27,6 +30,11 @@ public class PlayerControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (gameObject.transform.position.y < respawnHeight) {
+            humanoid.position = spawnPos;
+            humanoid.velocity = new Vector3();
+        }
+
         float walkSpeed = (Input.GetKey(KeyCode.LeftShift)) ? 8.0f : 4.0f;
         float jumpPower = (Input.GetKey(KeyCode.LeftShift)) ? 18 : 13;
         Vector3 moveDirection = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));

@@ -29,7 +29,7 @@ public class NetworkManager : MonoBehaviour
 			
 			SendJoinRequest();	// FIND A BETTER PLACE FOR THIS!
 
-			StartCoroutine(RequestHeartbeat(1/60));//0.1f
+			StartCoroutine(RequestHeartbeat(0.1f));//0.1f
 		}
 	}
 
