@@ -18,8 +18,6 @@ public class Constants {
 	final public static short SMSG_LEAVE = 202;
 	final public static short CMSG_MOVE = 103;
 	final public static short SMSG_MOVE = 203;
-	final public static short CMSG_JUMP = 104;
-	final public static short SMSG_JUMP = 204;
 
 	final public static short CMSG_HEARTBEAT = 111;
 

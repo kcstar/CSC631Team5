@@ -24,6 +24,7 @@ public class MessageQueue : MonoBehaviour {
 		while (msgQueue!=null && msgQueue.Count > 0) {
 			ExtendedEventArgs args = msgQueue.Dequeue();
 			if (callbackList.ContainsKey(args.event_id)) {
+				Debug.Log("Incoming message " + args.event_id);
 				callbackList[args.event_id](args);
 				Debug.Log("Processed Event No. " + args.event_id + " [" + args.GetType() + "]");
 				Debug.Log("Processed Event No. " + args.event_id + " [" + args.ToString() + "]");
@@ -34,6 +35,7 @@ public class MessageQueue : MonoBehaviour {
 	}
 	
 	public void AddCallback(int event_id, Callback callback) {
+		Debug.Log("Adding callback for " + event_id);
 		callbackList.Add(event_id, callback);
 	}
 

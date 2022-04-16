@@ -5,9 +5,15 @@ using UnityEngine;
 public class ResponseMoveEventArgs : ExtendedEventArgs
 {
 	public int user_id { get; set; } // The user_id of whom who sent the request
-	public int piece_idx { get; set; } // The index of the piece to move. Belongs to player with id user_id
-	public int x { get; set; } // The x coordinate of the target location
-	public int y { get; set; } // The y coordinate of the target location
+	public float posX { get; set; }
+	public float posY { get; set; }
+	public float posZ { get; set; }
+	public float velX { get; set; }
+	public float velY { get; set; }
+	public float velZ { get; set; }
+	public float walkSpeed { get; set; }
+	public float walkDir { get; set; }
+	public bool jumping { get; set; }
 
 	public ResponseMoveEventArgs()
 	{
@@ -18,9 +24,15 @@ public class ResponseMoveEventArgs : ExtendedEventArgs
 public class ResponseMove : NetworkResponse
 {
 	private int user_id;
-	private int piece_idx;
-	private int x;
-	private int y;
+	private float posX;
+	private float posY;
+	private float posZ;
+	private float velX;
+	private float velY;
+	private float velZ;
+	private float walkSpeed;
+	private float walkDir;
+	private bool jumping;
 
 	public ResponseMove()
 	{
@@ -29,9 +41,15 @@ public class ResponseMove : NetworkResponse
 	public override void parse()
 	{
 		user_id = DataReader.ReadInt(dataStream);
-		piece_idx = DataReader.ReadInt(dataStream);
-		x = DataReader.ReadInt(dataStream);
-		y = DataReader.ReadInt(dataStream);
+		posX = DataReader.ReadFloat(dataStream);
+		posY = DataReader.ReadFloat(dataStream);
+		posZ = DataReader.ReadFloat(dataStream);
+		velX = DataReader.ReadFloat(dataStream);
+		velY = DataReader.ReadFloat(dataStream);
+		velZ = DataReader.ReadFloat(dataStream);
+		walkSpeed = DataReader.ReadFloat(dataStream);
+		walkDir = DataReader.ReadFloat(dataStream);
+		jumping = DataReader.ReadBool(dataStream);
 	}
 
 	public override ExtendedEventArgs process()
@@ -39,9 +57,15 @@ public class ResponseMove : NetworkResponse
 		ResponseMoveEventArgs args = new ResponseMoveEventArgs
 		{
 			user_id = user_id,
-			piece_idx = piece_idx,
-			x = x,
-			y = y
+			posX = posX,
+			posY = posY,
+			posZ = posZ,
+			velX = velX,
+			velY = velY,
+			velZ = velZ,
+			walkSpeed = walkSpeed,
+			walkDir = walkDir,
+			jumping = jumping
 		};
 
 		return args;

@@ -23,7 +23,7 @@ public class Player : MonoBehaviour
     }
     public float walkSpeed = 0;
 
-    public float jumpPower = 13;
+    public float jumpPower = 15;
 
     void Start()
     {

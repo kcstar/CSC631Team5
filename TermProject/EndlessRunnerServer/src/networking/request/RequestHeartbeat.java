@@ -24,7 +24,7 @@ public class RequestHeartbeat extends GameRequest {
     public void doBusiness() throws Exception {
         for (GameResponse response : client.getUpdates()) {
             try {
-                System.out.println(response.toString());
+                //System.out.println(response.toString());
                 client.send(response);
             } catch (IOException ex) {
                 Log.println_e(ex.getMessage());

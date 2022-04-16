@@ -3,6 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
+
 public class PlayerControl : MonoBehaviour
 {
     private float horizontalInput;
@@ -11,8 +13,13 @@ public class PlayerControl : MonoBehaviour
     // Start is called before the first frame update
     private Player humanoid;
 
+    private double lastMoveRequest = 0;
+    private double MOVE_REQUEST_FREQUENCY = 0.2;
+    private bool movementChanged = false;
+
     void Start()
     {
+		networkManager = GameObject.Find("Network Manager").GetComponent<NetworkManager>();
         humanoid = gameObject.GetComponent<Player>();
 		DontDestroyOnLoad(gameObject);
     }
@@ -20,22 +27,26 @@ public class PlayerControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        humanoid.walkSpeed = (Input.GetKey(KeyCode.LeftShift)) ? 5.0f : 3.0f;
-        humanoid.MoveDirection = new Vector3(Input.GetAxis("Horizontal"), 0, 0);
-    }
-    
-    private void FixedUpdate()
-    {
-            /*
-            float jumpPower = 6f;
-            if (superJumpsRemaining > 0)
-            {
-                jumpPower *= 2;
-                superJumpsRemaining--;
-            }
-            */
+        float walkSpeed = (Input.GetKey(KeyCode.LeftShift)) ? 8.0f : 4.0f;
+        float jumpPower = (Input.GetKey(KeyCode.LeftShift)) ? 18 : 13;
+        Vector3 moveDirection = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
+        bool jumping = Input.GetKey(KeyCode.Space);
 
-        humanoid.jumping = Input.GetKey(KeyCode.Space);
+        if (walkSpeed != humanoid.walkSpeed || jumpPower != humanoid.jumpPower || moveDirection != humanoid.MoveDirection || jumping != humanoid.jumping) {
+            movementChanged = true;
+        }
+
+        humanoid.walkSpeed = walkSpeed;
+        humanoid.jumpPower = jumpPower;
+        humanoid.MoveDirection = moveDirection;
+        humanoid.jumping = jumping;
+
+        double currentTime = Time.realtimeSinceStartup;
+        if (currentTime - lastMoveRequest > MOVE_REQUEST_FREQUENCY || movementChanged) {
+		    networkManager.SendMoveRequest(humanoid.position.x, humanoid.position.y, humanoid.position.z, humanoid.velocity.x, humanoid.velocity.y, humanoid.velocity.z, humanoid.walkSpeed, Input.GetAxis("Horizontal"), humanoid.jumping);
+            lastMoveRequest = currentTime;
+            movementChanged = false;
+        }
     }
 
     private void onTriggerEnter(Collider other)
@@ -49,7 +60,6 @@ public class PlayerControl : MonoBehaviour
 
     public void OnCollisionEnter(Collision node)
     {
-        Debug.Log("Collision Object: " + node.gameObject.tag);
 
         if (node.gameObject.tag == "Coin")
         {

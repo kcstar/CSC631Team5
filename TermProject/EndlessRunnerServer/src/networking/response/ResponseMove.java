@@ -11,9 +11,15 @@ import utility.Log;
  */
 public class ResponseMove extends GameResponse {
     private Player player;
-    private int x;
-    private int y;
-    private int index;
+    private float posX;
+    private float posY;
+    private float posZ;
+    private float velX;
+    private float velY;
+    private float velZ;
+    private float walkSpeed;
+    private float walkDir;
+    private boolean jumping;
 
     public ResponseMove() {
         responseCode = Constants.SMSG_MOVE;
@@ -23,11 +29,15 @@ public class ResponseMove extends GameResponse {
     public byte[] constructResponseInBytes() {
         GamePacket packet = new GamePacket(responseCode);
         packet.addInt32(player.getID());
-        packet.addInt32(index);
-        packet.addInt32(x);
-        packet.addInt32(y);
-
-        Log.printf("Player with id %d has moved piece %d to (%d, %d)", player.getID(), index, x, y);
+        packet.addFloat(posX);
+        packet.addFloat(posY);
+        packet.addFloat(posZ);
+        packet.addFloat(velX);
+        packet.addFloat(velY);
+        packet.addFloat(velZ);
+        packet.addFloat(walkSpeed);
+        packet.addFloat(walkDir);
+        packet.addBoolean(jumping);
  
         return packet.getBytes();
     }
@@ -36,9 +46,15 @@ public class ResponseMove extends GameResponse {
         this.player = player;
     }
 
-    public void setData(int index, int x, int y) {
-        this.index = index;
-        this.y = y; 
-        this.x = x;
+    public void setData(float posX, float posY, float posZ, float velX, float velY, float velZ, float walkSpeed, float walkDir, boolean jumping) {
+        this.posX = posX;
+        this.posY = posY;;
+        this.posZ = posZ;
+        this.velX = velX;
+        this.velY = velY;
+        this.velZ = velZ;
+        this.walkSpeed = walkSpeed;
+        this.walkDir = walkDir;
+        this.jumping = jumping;
     }
 }

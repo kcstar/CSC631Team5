@@ -9,11 +9,17 @@ public class RequestMove : NetworkRequest
 		request_id = Constants.CMSG_MOVE;
 	}
 
-	public void send(int x, int y, int z)
+	public void send(float posX, float posY, float posZ, float velX, float velY, float velZ, float walkSpeed, float walkDir, bool jumping)
 	{
 		packet = new GamePacket(request_id);
-		packet.addInt32(x);
-		packet.addInt32(y);
-		packet.addInt32(z);
+		packet.addFloat32(posX);
+		packet.addFloat32(posY);
+		packet.addFloat32(posZ);
+		packet.addFloat32(velX);
+		packet.addFloat32(velY);
+		packet.addFloat32(velZ);
+		packet.addFloat32(walkSpeed);
+		packet.addFloat32(walkDir);
+		packet.addBool(jumping);
 	}
 }

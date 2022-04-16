@@ -29,7 +29,7 @@ public class NetworkManager : MonoBehaviour
 			
 			SendJoinRequest();	// FIND A BETTER PLACE FOR THIS!
 
-			StartCoroutine(RequestHeartbeat(0.1f));
+			StartCoroutine(RequestHeartbeat(1/60));//0.1f
 		}
 	}
 
@@ -57,12 +57,12 @@ public class NetworkManager : MonoBehaviour
 		return false;
 	}
 
-	public bool SendMoveRequest(int pieceIndex, int x, int y)
+	public bool SendMoveRequest(float posX, float posY, float posZ, float velX, float velY, float velZ, float walkSpeed, float walkDir, bool jumping)
 	{
 		if (cManager && cManager.IsConnected())
 		{
 			RequestMove request = new RequestMove();
-			request.send(pieceIndex, x, y);
+			request.send(posX, posY, posZ, velX, velY, velZ, walkSpeed, walkDir, jumping);
 			cManager.send(request);
 			return true;
 		}
