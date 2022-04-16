@@ -59,8 +59,8 @@ public class GameManager : MonoBehaviour
     public void OnResponseMove(ExtendedEventArgs eventArgs) {
         ResponseMoveEventArgs args = eventArgs as ResponseMoveEventArgs;
         if (args.user_id != userId) {
-            GameObject playerObject = players[args.user_id];
-            if (playerObject != null) {
+            if (players.ContainsKey(args.user_id)) {
+                GameObject playerObject = players[args.user_id];
                 // Move the player
                 Player playerScript = playerObject.GetComponent<Player>();
                 playerScript.position = new Vector3(args.posX, args.posY, args.posZ);
@@ -68,6 +68,8 @@ public class GameManager : MonoBehaviour
                 playerScript.walkSpeed = args.walkSpeed;
                 playerScript.MoveDirection = new Vector3(args.walkX, 0, args.walkZ);
                 playerScript.jumping = args.jumping;
+            } else {
+                Debug.Log("Couldn't find the other players!");
             }
         }
     }
