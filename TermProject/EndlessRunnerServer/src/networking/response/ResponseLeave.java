@@ -27,16 +27,21 @@ public class ResponseLeave extends GameResponse {
         List<Player> activePlayers = gs.getActivePlayers(); 
       
         for(Player p : activePlayers) {
-            if(p.getID() == player.getID()) 
-                gs.removeActivePlayer(p.getID()); 
+            if(p.getID() == player.getID()) {
+                gs.removeActivePlayer(p.getID());
+            }
         }
 
         Log.printf("Player with id %d has left.", player.getID());
-        player.setReadyStatusOn(false);
         return packet.getBytes();
     }
 
     public void setPlayer(Player player) {
         this.player = player;
+    }
+
+    @Override
+    public String toString() {
+        return "" + player.getID();
     }
 }

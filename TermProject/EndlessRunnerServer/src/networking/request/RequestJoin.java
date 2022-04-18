@@ -2,13 +2,13 @@ package networking.request;
 
 // Java Imports
 import java.io.IOException;
+import java.util.List;
 
 // Other Imports
 import core.GameServer;
 import core.NetworkManager;
 import model.Player;
 import networking.response.ResponseJoin;
-import networking.response.ResponseName;
 import utility.Log;
 
 /**
@@ -34,27 +34,58 @@ public class RequestJoin extends GameRequest {
 
     @Override
     public void doBusiness() throws Exception {
+
+        System.out.println("Incoming join request!");
+
         GameServer gs = GameServer.getInstance();
-        int id = gs.getID();
+        int id = gs.getID();    // Give the client a user id, 0 if none available
         if(id != 0) {
+
+            // Player join success! Return join success
+
             player = new Player(id, "Player " + id);
             player.setID(id);
             gs.setActivePlayer(player);
-
             player.setClient(client);
             // Pass Player reference into thread
             client.setPlayer(player);
             // Set response information
+
             responseJoin.setStatus((short) 0); // Login is a success
             responseJoin.setPlayer(player);
+            responseJoin.setIsCurrentPlayer(true);
+
+            List<Player> activePlayers = gs.getActivePlayers();
+
+            for(Player p : activePlayers) {
+                if(p.getID() != player.getID()) {
+                    responseJoin = new ResponseJoin();
+                    responseJoin.setStatus((short) 0); // Login is a success
+                    responseJoin.setPlayer(player);
+                    responseJoin.setIsCurrentPlayer(false);
+                    p.getClient().addResponseForUpdate(responseJoin);
+
+                    responseJoin = new ResponseJoin();
+                    responseJoin.setStatus((short) 0); // Login is a success
+                    responseJoin.setPlayer(p);
+                    responseJoin.setIsCurrentPlayer(false);
+                    responses.add(responseJoin);
+                }
+            }
+
+            // Inform all other players of the join
+            /*
+            ResponseJoin connectedResponse = new ResponseJoin();
+            connectedResponse.setStatus((short) 0);
+            connectedResponse.setIsCurrentPlayer(false);
+            NetworkManager.addResponseForAllOnlinePlayers(player.getID(), connectedResponse);
+             */
+
             Log.printf("User '%s' has successfully logged in.", player.getName());
 
-            ResponseName responseName = new ResponseName();
-            responseName.setPlayer(player);
-            NetworkManager.addResponseForAllOnlinePlayers(player.getID(), responseName);
         } else {
             Log.printf("A user has tried to join, but failed to do so.");
-            responseJoin.setStatus((short) 1); 
+            responseJoin.setStatus((short) 1);
         }
     }
 }
