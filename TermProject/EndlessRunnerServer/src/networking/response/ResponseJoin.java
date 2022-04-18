@@ -15,6 +15,7 @@ public class ResponseJoin extends GameResponse {
 
     private short status;
     private Player player;
+    private boolean currentClient;
     
     public ResponseJoin() {
         responseCode = Constants.SMSG_JOIN;
@@ -24,28 +25,9 @@ public class ResponseJoin extends GameResponse {
     public byte[] constructResponseInBytes() {
         GamePacket packet = new GamePacket(responseCode);
         packet.addShort16(status);
-        if (status == 0) {
-            packet.addInt32(player.getID());
+        packet.addInt32((status == 0) ? player.getID() : 0);
+        packet.addBoolean(currentClient);
 
-            GameServer gs = GameServer.getInstance();
-            List<Player> activePlayers = gs.getActivePlayers(); 
-
-            boolean otherPlayerExists = false;
-            for(Player p : activePlayers) {
-                if(p.getID() != player.getID()) {
-                    packet.addInt32(p.getID());
-                    packet.addString(p.getName());
-                    packet.addBoolean(p.getReadyStatus());
-                    otherPlayerExists = true;
-                }
-            }
-
-            if(!otherPlayerExists) {
-                packet.addInt32(0);
-                packet.addString("NO OTHER PLAYER CONNECTED");
-                packet.addBoolean(false);
-            }
-        }
         return packet.getBytes();
     }
 
@@ -55,5 +37,9 @@ public class ResponseJoin extends GameResponse {
 
     public void setPlayer(Player player) {
         this.player = player;
+    }
+
+    public void setIsCurrentPlayer(boolean isPlayer) {
+        this.currentClient = isPlayer;
     }
 }
