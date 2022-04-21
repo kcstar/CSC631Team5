@@ -292,6 +292,10 @@ MonoBehaviour:
   level_start: {fileID: 4585847258518771197, guid: 0830e1504daaeca429f3e551c260f4ad, type: 3}
   levels:
   - {fileID: 5036180425535611685, guid: 0c32a9aa76ce34144b68f94c52db3561, type: 3}
+  - {fileID: 5140097925525937601, guid: 506690edd1cee5844b7e13c72995e970, type: 3}
+  - {fileID: 4693978981497510638, guid: 87f7e37bc0200244290daac717af5c6b, type: 3}
+  - {fileID: 1989513270933372008, guid: 286903cf10579b84fa6070831c732199, type: 3}
+  - {fileID: 5820476065181171129, guid: ccbf307fd2c571e45b6443ce9aed06d8, type: 3}
 --- !u!4 &876620627
 Transform:
   m_ObjectHideFlags: 0
@@ -343,7 +347,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 112
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!114 &1600805115
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -356,7 +360,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8de44a233caf46744bc7f9fae285f83f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  respawnHeight: 6
+  respawnHeight: 1
 --- !u!136 &1600805116
 CapsuleCollider:
   m_ObjectHideFlags: 0

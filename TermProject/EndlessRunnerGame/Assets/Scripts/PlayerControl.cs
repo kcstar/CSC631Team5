@@ -38,7 +38,7 @@ public class PlayerControl : MonoBehaviour
 
         float horizontal = Input.GetAxisRaw("Horizontal");
         float vertical = Input.GetAxisRaw("Vertical");
-        float walkSpeed = (Input.GetKey(KeyCode.LeftShift)) ? 8.0f : 4.0f;
+        float walkSpeed = (Input.GetKey(KeyCode.LeftShift)) ? 10.0f : 4.0f;
         float jumpPower = (Input.GetKey(KeyCode.LeftShift)) ? 18 : 13;
         Vector3 moveDirection = new Vector3(horizontal, 0, vertical);
         bool jumping = Input.GetKey(KeyCode.Space);
