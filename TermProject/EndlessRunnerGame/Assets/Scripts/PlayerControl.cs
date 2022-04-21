@@ -13,11 +13,12 @@ public class PlayerControl : MonoBehaviour
 	private NetworkManager networkManager;
     // Start is called before the first frame update
     private Player humanoid;
-
     private double lastMoveRequest = 0;
-    private double MOVE_REQUEST_FREQUENCY = 0.2;
+    private double MOVE_REQUEST_FREQUENCY = 0.5;
     private bool movementChanged = false;
     public float respawnHeight;
+
+    private int requestNumber = 0;
 
     void Start()
     {
@@ -28,16 +29,18 @@ public class PlayerControl : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         if (gameObject.transform.position.y < respawnHeight) {
             humanoid.position = spawnPos;
             humanoid.velocity = new Vector3();
         }
 
+        float horizontal = Input.GetAxisRaw("Horizontal");
+        float vertical = Input.GetAxisRaw("Vertical");
         float walkSpeed = (Input.GetKey(KeyCode.LeftShift)) ? 8.0f : 4.0f;
         float jumpPower = (Input.GetKey(KeyCode.LeftShift)) ? 18 : 13;
-        Vector3 moveDirection = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
+        Vector3 moveDirection = new Vector3(horizontal, 0, vertical);
         bool jumping = Input.GetKey(KeyCode.Space);
 
         if (walkSpeed != humanoid.walkSpeed || jumpPower != humanoid.jumpPower || moveDirection != humanoid.MoveDirection || jumping != humanoid.jumping) {
@@ -51,9 +54,11 @@ public class PlayerControl : MonoBehaviour
 
         double currentTime = Time.realtimeSinceStartup;
         if (currentTime - lastMoveRequest > MOVE_REQUEST_FREQUENCY || movementChanged) {
-		    networkManager.SendMoveRequest(humanoid.position.x, humanoid.position.y, humanoid.position.z, humanoid.velocity.x, humanoid.velocity.y, humanoid.velocity.z, humanoid.walkSpeed, Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"), humanoid.jumping);
+            Debug.Log("Sent move " + requestNumber);
+		    networkManager.SendMoveRequest(humanoid.position.x, humanoid.position.y, humanoid.position.z, humanoid.velocity.x, humanoid.velocity.y, humanoid.velocity.z, humanoid.walkSpeed, horizontal, vertical, humanoid.jumping);
             lastMoveRequest = currentTime;
             movementChanged = false;
+            requestNumber++;
         }
     }
 
