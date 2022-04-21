@@ -24,6 +24,7 @@ public class GameManager : MonoBehaviour
         msgQueue.AddCallback(Constants.SMSG_LEAVE, OnResponseLeave);
         msgQueue.AddCallback(Constants.SMSG_MOVE, OnResponseMove);
 
+        Instantiate(Resources.Load("Escape Menu"));
     }
 
     // Update is called once per frame
@@ -38,6 +39,7 @@ public class GameManager : MonoBehaviour
         if (args.user_id == Constants.OP_ID) {
             
         }*/
+        Debug.Log("Joined! " + args.is_current_client + " " + args.user_id);
         Vector3 spawnPos = new Vector3(0 + garbageVar, 16, (float)-53.34);
         if (!args.is_current_client) {
             GameObject otherPlayer = Instantiate(playerPrefab, spawnPos, Quaternion.identity);
@@ -53,6 +55,7 @@ public class GameManager : MonoBehaviour
         GameObject playerObject = players[args.user_id];
         if (playerObject != null) {
             Destroy(playerObject);
+            players.Remove(args.user_id);
         }
     }
 

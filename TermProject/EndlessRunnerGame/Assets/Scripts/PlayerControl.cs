@@ -25,7 +25,7 @@ public class PlayerControl : MonoBehaviour
         spawnPos = gameObject.transform.position;
 		networkManager = GameObject.Find("Network Manager").GetComponent<NetworkManager>();
         humanoid = gameObject.GetComponent<Player>();
-		DontDestroyOnLoad(gameObject);
+		//DontDestroyOnLoad(gameObject);
     }
 
     // Update is called once per frame

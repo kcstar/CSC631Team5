@@ -4,6 +4,7 @@ package networking.request;
 import java.io.IOException;
 
 // Other Imports
+import core.GameClient;
 import model.Player;
 import networking.response.ResponseLeave;
 import core.NetworkManager;
@@ -13,7 +14,7 @@ public class RequestLeave extends GameRequest {
     private ResponseLeave responseLeave;
 
     public RequestLeave() {
-        responses.add(responseLeave = new ResponseLeave());
+        /*responses.add(responseLeave = new ResponseLeave());*/
     }
 
     @Override
@@ -23,10 +24,10 @@ public class RequestLeave extends GameRequest {
 
     @Override
     public void doBusiness() throws Exception {
-        Player player = client.getPlayer();
+        client.disconnect();
 
-        responseLeave.setPlayer(player);
+        //responseLeave.setPlayer(player);
 
-        NetworkManager.addResponseForAllOnlinePlayers(player.getID(), responseLeave);
+        //NetworkManager.addResponseForAllOnlinePlayers(player.getID(), responseLeave);
     }
 }
