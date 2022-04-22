@@ -37,8 +37,8 @@ public class Player : MonoBehaviour
     {
 
         rigidBodyComponent.velocity = (new Vector3(0, rigidBodyComponent.velocity.y, 0)) + moveDirection * walkSpeed;
-
-        /*if (Physics.OverlapSphere(rigidBodyComponent.position - new Vector3(0, GetComponent<MeshCollider>().bounds.size.y/2, 0), 0.1f, LayerMask.GetMask("Default")).Length == 0)
+        /*
+        if (Physics.OverlapSphere(rigidBodyComponent.position - new Vector3(0, GetComponent<CapsuleCollider>().bounds.size.y/2, 0), 0.1f, LayerMask.GetMask("Default")).Length == 0)
         {
             return;
         }
