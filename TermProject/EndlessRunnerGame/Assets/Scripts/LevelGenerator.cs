@@ -8,6 +8,7 @@ public class LevelGenerator : MonoBehaviour
     [SerializeField] private Transform[] levels;
     private Vector3 lastEndPosition;
     private const float PLAYER_DISTANCE_SPAWN_LEVEL = 30f;
+    private int prevLevel = 3;
 
 
     private void Awake()
@@ -33,9 +34,13 @@ public class LevelGenerator : MonoBehaviour
     {
         int selectedLevel = Random.Range(0, levels.Length);
         //Transform levelPartTransform = Instantiate(levels[selectedLevel], spawnPosition, Quaternion.identity);
-        Transform levelPartTransform = Instantiate(levels[selectedLevel], spawnPosition + (new Vector3(0, 0, 65.85778f)), Quaternion.identity);
-
-        Debug.Log($"Spawning level {selectedLevel} prefab...");
+        //while (selectedLevel == prevLevel)
+        //{
+        //    selectedLevel = Random.Range(0, levels.Length);
+        //}
+        Transform levelPartTransform = Instantiate(levels[selectedLevel], spawnPosition + (new Vector3(2.4728f, 0, 65.85778f)), Quaternion.identity);
+        prevLevel = selectedLevel;
+        Debug.Log($"Spawning {levels[selectedLevel].name}...");
         return levelPartTransform;
     }
 }
