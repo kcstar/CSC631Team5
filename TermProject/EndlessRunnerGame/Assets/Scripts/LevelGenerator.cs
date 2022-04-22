@@ -31,7 +31,7 @@ public class LevelGenerator : MonoBehaviour
     }
     private Transform spawnLevel(Vector3 spawnPosition)
     {
-        int selectedLevel = Random.Range(0, levels.Length);
+        int selectedLevel = Random.Range(1, levels.Length);
         //Transform levelPartTransform = Instantiate(levels[selectedLevel], spawnPosition, Quaternion.identity);
         Transform levelPartTransform = Instantiate(levels[selectedLevel], spawnPosition + (new Vector3(2.4728f, 0, 65.85778f)), Quaternion.identity);
 
