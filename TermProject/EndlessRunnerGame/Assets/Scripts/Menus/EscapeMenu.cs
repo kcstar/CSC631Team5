@@ -10,6 +10,7 @@ public class EscapeMenu : MonoBehaviour
     bool escapePressedLastFrame = false;
     Canvas menu;
     public GameObject eventSystemTemplate;
+    AsyncOperation sceneLoader;
 
     void Start() {
         menu = gameObject.GetComponent<Canvas>();
@@ -17,6 +18,8 @@ public class EscapeMenu : MonoBehaviour
         {
             var eventSystem = new GameObject("EventSystem", typeof(EventSystem), typeof(StandaloneInputModule));
         }
+        sceneLoader = SceneManager.LoadSceneAsync("MainMenu");
+        sceneLoader.allowSceneActivation = false;
     }
 
     void FixedUpdate() {
@@ -47,6 +50,6 @@ public class EscapeMenu : MonoBehaviour
     }
     
     public void OnLeavePressed() {
-        SceneManager.LoadScene("MainMenu");
+        sceneLoader.allowSceneActivation = true;
     }
 }
