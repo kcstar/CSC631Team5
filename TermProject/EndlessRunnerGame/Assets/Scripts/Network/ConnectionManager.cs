@@ -13,6 +13,8 @@ public class ConnectionManager : MonoBehaviour
 	private TcpClient mySocket;
 	private NetworkStream theStream;
 	private bool socketReady = false;
+	private string hostIP = Constants.REMOTE_HOST;
+	private int hostPort = Constants.REMOTE_PORT;
 	
 	void Awake() {
 		networkManager = GameObject.Find("Network Manager");
@@ -26,7 +28,7 @@ public class ConnectionManager : MonoBehaviour
 		}
 		try
 		{
-			mySocket = new TcpClient (Constants.REMOTE_HOST, Constants.REMOTE_PORT);
+			mySocket = new TcpClient (hostIP, hostPort);
 			theStream = mySocket.GetStream();
 			socketReady = true;
 			Debug.Log("Connected");
@@ -95,6 +97,14 @@ public class ConnectionManager : MonoBehaviour
 	public bool IsConnected()
 	{
 		return socketReady;
+	}
+
+	public void SetHostIP(string hostIP) {
+		this.hostIP = hostIP;
+	}
+
+	public void SetHostPort(int hostPort) {
+		this.hostPort = hostPort;
 	}
 	
 	// Update is called once per frame
