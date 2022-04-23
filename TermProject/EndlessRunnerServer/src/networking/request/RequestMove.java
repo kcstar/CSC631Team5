@@ -36,6 +36,7 @@ public class RequestMove extends GameRequest {
     @Override
     public void doBusiness() throws Exception {
         Player player = client.getPlayer();
+        System.out.println("INCOMING MOVE REQUEST FROM PLAYER " + player.getID());
 
         responseMove.setPlayer(player);
         responseMove.setData(posX, posY, posZ, velX, velY, velZ, walkSpeed, walkX, walkZ, jumping);

@@ -41,6 +41,7 @@ public class GameClient implements Runnable {
     private Queue<GameResponse> updates; // Temporarily store responses for client
     // Other Variables
     private Player player;
+    private boolean forceDisconnect = false;
 
     /**
      * Initialize the GameClient using the client socket and creating both input
@@ -112,7 +113,7 @@ public class GameClient implements Runnable {
                     }
                 } else {
                     // If there was no activity for the last moments, exit loop
-                    if ((System.currentTimeMillis() - lastActivity) / 1000 >= Constants.TIMEOUT_SECONDS) {
+                    if ((System.currentTimeMillis() - lastActivity) / 1000 >= Constants.TIMEOUT_SECONDS || forceDisconnect) {
                         isDone = true;
                     }
                 }
@@ -171,6 +172,10 @@ public class GameClient implements Runnable {
 
     public boolean addResponseForUpdate(GameResponse response) {
         return updates.add(response);
+    }
+
+    public void disconnect() {
+        forceDisconnect = true;
     }
 
     public void send(GameResponse response) throws IOException {

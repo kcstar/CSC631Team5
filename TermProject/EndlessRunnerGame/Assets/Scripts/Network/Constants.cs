@@ -2,7 +2,8 @@ public class Constants
 {
 	// Constants
 	public static readonly string CLIENT_VERSION = "1.00";
-	public static readonly string REMOTE_HOST = "localhost"; //"localhost"; //AWS Game Server IP: 54.153.69.253
+	public static readonly string REMOTE_HOST = "54.153.69.253"; // AWS Server
+	public static readonly string LOCAL_HOST = "localhost";
 	public static readonly int REMOTE_PORT = 1729;
 	
 	// Request (1xx) + Response (2xx)

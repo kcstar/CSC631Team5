@@ -6,10 +6,11 @@ using UnityEngine;
 public class NetworkManager : MonoBehaviour
 {
 	private ConnectionManager cManager;
+	private NetworkConfiguration networkConfig;
 
 	void Awake()
 	{
-		DontDestroyOnLoad(gameObject);
+		//DontDestroyOnLoad(gameObject);
 
 		gameObject.AddComponent<MessageQueue>();
 		gameObject.AddComponent<ConnectionManager>();
@@ -22,6 +23,10 @@ public class NetworkManager : MonoBehaviour
 	void Start()
     {
 		cManager = GetComponent<ConnectionManager>();
+		networkConfig = GameObject.Find("Network Configuration").GetComponent<NetworkConfiguration>();
+
+		cManager.SetHostIP(networkConfig.hostIP);
+		cManager.SetHostPort(networkConfig.hostPort);
 
 		if (cManager)
 		{
@@ -31,6 +36,10 @@ public class NetworkManager : MonoBehaviour
 
 			StartCoroutine(RequestHeartbeat(0.1f));//0.1f
 		}
+	}
+
+	void OnDestroy() {
+		SendLeaveRequest();
 	}
 
 	public bool SendJoinRequest()
