@@ -30,7 +30,7 @@ public class Player : MonoBehaviour
         rigidBodyComponent = GetComponent<Rigidbody>();
         Physics.gravity = new Vector3(0, -40.0F, 0);
         
-		DontDestroyOnLoad(gameObject);
+		//DontDestroyOnLoad(gameObject);
     }
     
     private void Update()
