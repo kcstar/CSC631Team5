@@ -7,7 +7,7 @@ public class LevelGenerator : MonoBehaviour
     [SerializeField] private Transform level_start;
     [SerializeField] private Transform[] levels;
     private Vector3 lastEndPosition;
-    private const float PLAYER_DISTANCE_SPAWN_LEVEL = 30f;
+    private const float PLAYER_DISTANCE_SPAWN_LEVEL = 85f;
     private int prevLevel = 3;
 
 
