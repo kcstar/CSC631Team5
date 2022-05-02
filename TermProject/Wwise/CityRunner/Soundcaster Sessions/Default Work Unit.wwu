@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{C3876FD1-BF45-433C-8C82-961F773B4DDC}" SchemaVersion="103">
+	<SoundcasterSessions>
+		<WorkUnit Name="Default Work Unit" ID="{C3876FD1-BF45-433C-8C82-961F773B4DDC}" PersistMode="Standalone">
+			<ChildrenList>
+				<SoundcasterSession Name="Official" ID="{350B1EAC-3B94-4400-ABB9-027C9612C787}">
+					<ModuleList>
+						<Module>
+							<ObjectRef Name="Play_Main_Menu" ID="{3C575442-305D-4E6D-BDC9-C6F156F216B3}" WorkUnitID="{9FB5C3DD-0BF6-47C9-B621-FF1086A18E67}"/>
+							<Position X="0" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Play_SFX_Explosion" ID="{987F40CE-CE60-4981-BBF7-818143138553}" WorkUnitID="{9FB5C3DD-0BF6-47C9-B621-FF1086A18E67}"/>
+							<Position X="0" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Play_Ambiance" ID="{78673560-28AE-406D-976E-634BD31A6DAF}" WorkUnitID="{9FB5C3DD-0BF6-47C9-B621-FF1086A18E67}"/>
+							<Position X="0" Y="2"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Play_Gameplay" ID="{03F5645E-D376-4D27-A751-EDA6597588EB}" WorkUnitID="{9FB5C3DD-0BF6-47C9-B621-FF1086A18E67}"/>
+							<Position X="1" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Play_SFX_Jump" ID="{AEAB1BA6-DFAD-4F7C-B888-398744C06DB0}" WorkUnitID="{9FB5C3DD-0BF6-47C9-B621-FF1086A18E67}"/>
+							<Position X="1" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Play_VO_Death_1" ID="{3429CE2C-C0D0-473C-AC77-5FC63CA61C78}" WorkUnitID="{9FB5C3DD-0BF6-47C9-B621-FF1086A18E67}"/>
+							<Position X="1" Y="2"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Play_Footsteps" ID="{4D0C99C7-D0D1-42BC-A46D-B30CB8055E20}" WorkUnitID="{9FB5C3DD-0BF6-47C9-B621-FF1086A18E67}"/>
+							<Position X="2" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Play_SFX_Menu_Confirm" ID="{26C0E3AE-CC25-4D76-A046-460E53A48FBF}" WorkUnitID="{9FB5C3DD-0BF6-47C9-B621-FF1086A18E67}"/>
+							<Position X="2" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Play_SFX_Coin" ID="{6FCD3CA1-5DF9-49D9-B215-EC67AF14B3B3}" WorkUnitID="{9FB5C3DD-0BF6-47C9-B621-FF1086A18E67}"/>
+							<Position X="3" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Play_SFX_Menu_Select" ID="{3F6566C5-C584-4E40-87F2-FBA1E4547FE3}" WorkUnitID="{9FB5C3DD-0BF6-47C9-B621-FF1086A18E67}"/>
+							<Position X="3" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Play_SFX_Dumpster" ID="{790950C9-67FB-458B-9108-0D1716637BDA}" WorkUnitID="{9FB5C3DD-0BF6-47C9-B621-FF1086A18E67}"/>
+							<Position X="4" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Play_SFX_Throw" ID="{9AD1B336-B228-4581-829D-F1C77DF4B8D4}" WorkUnitID="{9FB5C3DD-0BF6-47C9-B621-FF1086A18E67}"/>
+							<Position X="4" Y="1"/>
+						</Module>
+					</ModuleList>
+					<RTPCValueList ShowAll="true"/>
+					<CurrentStateList ShowAll="true"/>
+					<CurrentSwitchList ShowAll="true"/>
+				</SoundcasterSession>
+			</ChildrenList>
+		</WorkUnit>
+	</SoundcasterSessions>
+</WwiseDocument>

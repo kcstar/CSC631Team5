@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{7E4D1A86-331F-4835-8154-33DB88D11971}" SchemaVersion="103">
+	<InteractiveMusic>
+		<WorkUnit Name="Default Work Unit" ID="{7E4D1A86-331F-4835-8154-33DB88D11971}" PersistMode="Standalone">
+			<ChildrenList>
+				<MusicPlaylistContainer Name="Main_Menu" ID="{49BBBDB4-E3A1-4856-A4DB-4F4581DAB229}" ShortID="862786450">
+					<PropertyList>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-15</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Vorbis Quality High" ID="{53A9DE0F-3F4F-4B59-8614-3F9E3C7358FC}" WorkUnitID="{F6B2880C-85E5-47FA-A126-645B5DFD9ACC}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Music" ID="{F80CA91D-382A-4EC5-A7D5-5B194946A676}" WorkUnitID="{DD87CA62-7EBB-4464-9491-E586973CBA5C}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<MusicSegment Name="Song For Rooftop Runner 02" ID="{06DF5A10-321A-411F-8288-E73F563768AF}" ShortID="571029160">
+							<PropertyList>
+								<Property Name="EndPosition" Type="Real64" Value="88615.3968253968"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B3583AF1-8D28-4F4D-B419-193D520874E1}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{DD87CA62-7EBB-4464-9491-E586973CBA5C}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<MusicTrack Name="Song For Rooftop Runner 02" ID="{ED58D0F6-9533-42D6-83FD-E47F901361DA}" ShortID="819359187">
+									<ReferenceList>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{DD87CA62-7EBB-4464-9491-E586973CBA5C}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Song For Rooftop Runner 02" ID="{1640857B-B775-4497-87FB-D0B761A26BD5}">
+											<Language>SFX</Language>
+											<AudioFile>Song For Rooftop Runner 02.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="532191630"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<TransitionList>
+										<MusicTransition Name="Root" ID="{6E8C1F59-9DA6-463D-9768-B61D01335F33}">
+											<PropertyList>
+												<Property Name="IsFolder" Type="bool" Value="True"/>
+											</PropertyList>
+											<TransitionInfo/>
+										</MusicTransition>
+									</TransitionList>
+									<ObjectLists>
+										<ObjectList Name="Sequences">
+											<Reference>
+												<Local>
+													<MusicTrackSequence Name="" ID="{C4D4AADE-E04C-49EA-AAF7-5C4C23BBF3F2}">
+														<ObjectLists>
+															<ObjectList Name="Clips">
+																<Reference>
+																	<Local>
+																		<MusicClip Name="Song For Rooftop Runner 02" ID="{33841C79-BE77-4CDC-BF52-16B733762825}">
+																			<PropertyList>
+																				<Property Name="EndTrimOffset" Type="Real64" Value="88615.3968253968"/>
+																				<Property Name="FadeInMode" Type="int16" Value="0"/>
+																				<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																			</PropertyList>
+																			<AudioSourceRef Name="Song For Rooftop Runner 02" ID="{1640857B-B775-4497-87FB-D0B761A26BD5}"/>
+																		</MusicClip>
+																	</Local>
+																</Reference>
+															</ObjectList>
+														</ObjectLists>
+													</MusicTrackSequence>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+								</MusicTrack>
+							</ChildrenList>
+							<ObjectLists>
+								<ObjectList Name="Cues">
+									<Reference>
+										<Local>
+											<MusicCue Name="Entry Cue" ID="{1018F6CC-A95A-46B6-9C1E-3F4A5FBF006B}"/>
+										</Local>
+									</Reference>
+									<Reference>
+										<Local>
+											<MusicCue Name="Exit Cue" ID="{CF5B89F2-1DE3-4DFD-A8C7-7924E1A03FF3}">
+												<PropertyList>
+													<Property Name="CueType" Type="int16" Value="1"/>
+													<Property Name="TimeMs" Type="Real64" Value="88615.3968253968"/>
+												</PropertyList>
+											</MusicCue>
+										</Local>
+									</Reference>
+								</ObjectList>
+							</ObjectLists>
+						</MusicSegment>
+					</ChildrenList>
+					<TransitionList>
+						<MusicTransition Name="Root" ID="{A4EF69C6-4C11-4024-8D4E-5CCDE0CB3FD8}">
+							<PropertyList>
+								<Property Name="IsFolder" Type="bool" Value="True"/>
+							</PropertyList>
+							<ChildrenList>
+								<MusicTransition Name="Transition" ID="{13F421D8-0F7C-4A62-BBB8-A1A459C0764A}">
+									<TransitionInfo/>
+								</MusicTransition>
+							</ChildrenList>
+							<TransitionInfo/>
+						</MusicTransition>
+					</TransitionList>
+					<ObjectLists/>
+					<Playlist>
+						<MusicPlaylistItem Name="" ID="{9DA7C0DE-7BF3-4951-A4BD-26A7A473A073}" ShortID="344967495">
+							<PropertyList>
+								<Property Name="LoopCount" Type="int16" Value="0"/>
+							</PropertyList>
+							<ChildrenList>
+								<MusicPlaylistItem Name="" ID="{7591CBDA-69C3-4FDD-974E-6B0851C3DA67}" ShortID="955569612">
+									<PropertyList>
+										<Property Name="PlaylistItemType" Type="int16" Value="1"/>
+									</PropertyList>
+									<SegmentRef Name="Song For Rooftop Runner 02" ID="{06DF5A10-321A-411F-8288-E73F563768AF}"/>
+								</MusicPlaylistItem>
+							</ChildrenList>
+						</MusicPlaylistItem>
+					</Playlist>
+				</MusicPlaylistContainer>
+				<MusicPlaylistContainer Name="Gameplay" ID="{D113F752-34B0-40B7-8126-CB0A347D0B63}" ShortID="307280654">
+					<PropertyList>
+						<Property Name="Highpass" Type="int16">
+							<ValueList>
+								<Value>20</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Vorbis Quality High" ID="{53A9DE0F-3F4F-4B59-8614-3F9E3C7358FC}" WorkUnitID="{F6B2880C-85E5-47FA-A126-645B5DFD9ACC}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Music" ID="{F80CA91D-382A-4EC5-A7D5-5B194946A676}" WorkUnitID="{DD87CA62-7EBB-4464-9491-E586973CBA5C}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<MusicSegment Name="ER_Lvl1Music" ID="{51AA72B0-742B-4E0E-BD22-77AE6BBD45B0}" ShortID="901767094">
+							<PropertyList>
+								<Property Name="EndPosition" Type="Real64" Value="54860.0453514739"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-18</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B3583AF1-8D28-4F4D-B419-193D520874E1}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{DD87CA62-7EBB-4464-9491-E586973CBA5C}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<MusicTrack Name="ER_Lvl1Music" ID="{C49A0D48-A1B4-41AB-9613-A28C7A6F8CC9}" ShortID="6486866">
+									<ReferenceList>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{DD87CA62-7EBB-4464-9491-E586973CBA5C}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="ER_Lvl1Music" ID="{0FC96733-A6A6-4D60-9C22-333138772D2C}">
+											<Language>SFX</Language>
+											<AudioFile>ER_Lvl1Music.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="918621499"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<TransitionList>
+										<MusicTransition Name="Root" ID="{4B62E8E4-6A83-4E15-9C1C-B9705EB7F342}">
+											<PropertyList>
+												<Property Name="IsFolder" Type="bool" Value="True"/>
+											</PropertyList>
+											<TransitionInfo/>
+										</MusicTransition>
+									</TransitionList>
+									<ObjectLists>
+										<ObjectList Name="Sequences">
+											<Reference>
+												<Local>
+													<MusicTrackSequence Name="" ID="{591FBB8A-B405-4A1C-AD18-DD43A9DA60D5}">
+														<ObjectLists>
+															<ObjectList Name="Clips">
+																<Reference>
+																	<Local>
+																		<MusicClip Name="ER_Lvl1Music" ID="{04D910F0-357F-45C4-8ECD-4C24019A936E}">
+																			<PropertyList>
+																				<Property Name="EndTrimOffset" Type="Real64" Value="54860.0453514739"/>
+																				<Property Name="FadeInMode" Type="int16" Value="0"/>
+																				<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																			</PropertyList>
+																			<AudioSourceRef Name="ER_Lvl1Music" ID="{0FC96733-A6A6-4D60-9C22-333138772D2C}"/>
+																		</MusicClip>
+																	</Local>
+																</Reference>
+															</ObjectList>
+														</ObjectLists>
+													</MusicTrackSequence>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+								</MusicTrack>
+							</ChildrenList>
+							<ObjectLists>
+								<ObjectList Name="Cues">
+									<Reference>
+										<Local>
+											<MusicCue Name="Entry Cue" ID="{0A0E390C-DADF-4CE7-94AD-406A89D155ED}"/>
+										</Local>
+									</Reference>
+									<Reference>
+										<Local>
+											<MusicCue Name="Exit Cue" ID="{8A7CEC2C-6293-47FA-B069-6F6735DD9478}">
+												<PropertyList>
+													<Property Name="CueType" Type="int16" Value="1"/>
+													<Property Name="TimeMs" Type="Real64" Value="54860.0453514739"/>
+												</PropertyList>
+											</MusicCue>
+										</Local>
+									</Reference>
+								</ObjectList>
+							</ObjectLists>
+						</MusicSegment>
+					</ChildrenList>
+					<TransitionList>
+						<MusicTransition Name="Root" ID="{8FFC3F82-4A78-43DA-A81D-36856F20DCC7}">
+							<PropertyList>
+								<Property Name="IsFolder" Type="bool" Value="True"/>
+							</PropertyList>
+							<ChildrenList>
+								<MusicTransition Name="Transition" ID="{68FA12EB-3635-4F35-8A67-29D15AD76BE8}">
+									<TransitionInfo/>
+								</MusicTransition>
+							</ChildrenList>
+							<TransitionInfo/>
+						</MusicTransition>
+					</TransitionList>
+					<ObjectLists/>
+					<Playlist>
+						<MusicPlaylistItem Name="" ID="{EEFD526C-CCB8-4E61-A68E-0B19D9CAC32D}" ShortID="577789665">
+							<PropertyList>
+								<Property Name="LoopCount" Type="int16" Value="0"/>
+							</PropertyList>
+							<ChildrenList>
+								<MusicPlaylistItem Name="" ID="{FBB958A6-67D7-41B4-81BE-E96D24509928}" ShortID="314826985">
+									<PropertyList>
+										<Property Name="PlaylistItemType" Type="int16" Value="1"/>
+									</PropertyList>
+									<SegmentRef Name="ER_Lvl1Music" ID="{51AA72B0-742B-4E0E-BD22-77AE6BBD45B0}"/>
+								</MusicPlaylistItem>
+							</ChildrenList>
+						</MusicPlaylistItem>
+					</Playlist>
+				</MusicPlaylistContainer>
+			</ChildrenList>
+		</WorkUnit>
+	</InteractiveMusic>
+</WwiseDocument>
