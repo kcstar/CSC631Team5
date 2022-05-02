@@ -10,6 +10,7 @@ public class AnimControl : MonoBehaviour
     {
         if(Input.GetButtonDown("Jump"))
         {
+            AkSoundEngine.PostEvent("Play_SFX_Jump", this.gameObject);
             Player.GetComponent<Animator>().Play("6");
         }
     }
