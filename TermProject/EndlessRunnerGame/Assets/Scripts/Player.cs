@@ -36,10 +36,21 @@ public class Player : MonoBehaviour
     private void Update()
     {
         rigidBodyComponent.velocity = (new Vector3(0, rigidBodyComponent.velocity.y, 0)) + moveDirection * walkSpeed;
-        // if (Physics.OverlapSphere(rigidBodyComponent.position - new Vector3(0, GetComponent<CapsuleCollider>().bounds.size.y/2, 0), 0.1f, LayerMask.GetMask("Default")).Length == 0)
-        // {
-        //     return;
-        // }
+
+        SphereCollider collider = transform.Find("GroundContact").gameObject.GetComponent<SphereCollider>();
+        Vector3 colliderExtents = collider.bounds.extents;
+        Vector3 colliderOffset = Vector3.Scale(collider.center, transform.localScale);
+        Vector3 spherePosition = collider.transform.position + colliderOffset;
+        float sphereRadius = colliderExtents.x + 0.02f;
+
+        GameObject debugSphere = transform.Find("DebugSphere").gameObject;
+        debugSphere.transform.position = spherePosition;
+        debugSphere.transform.localScale = new Vector3(sphereRadius * 2, sphereRadius * 2, sphereRadius * 2) * 2;
+
+        if (Physics.OverlapSphere(spherePosition, sphereRadius, LayerMask.GetMask("Default")).Length == 0)
+        {
+            return;
+        }
         if (jumping)
         {
             rigidBodyComponent.velocity = new Vector3(rigidBodyComponent.velocity.x, jumpPower, rigidBodyComponent.velocity.z);
