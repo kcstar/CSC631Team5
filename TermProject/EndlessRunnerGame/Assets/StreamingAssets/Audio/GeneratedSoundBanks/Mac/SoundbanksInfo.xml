@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SoundBanksInfo Platform="Mac" BasePlatform="Mac" SchemaVersion="12" SoundbankVersion="140">
+	<RootPaths>
+		<ProjectRoot>C:\Users\Kevin\Documents\WwiseProjects\CityRunner\</ProjectRoot>
+		<SourceFilesRoot>C:\Users\Kevin\Documents\WwiseProjects\CityRunner\.cache\Mac\</SourceFilesRoot>
+		<SoundBanksRoot>C:\Users\Kevin\Documents\WwiseProjects\CityRunner\GeneratedSoundBanks\Mac\</SoundBanksRoot>
+		<ExternalSourcesInputFile></ExternalSourcesInputFile>
+		<ExternalSourcesOutputRoot>C:\Users\Kevin\Documents\WwiseProjects\CityRunner\GeneratedSoundBanks\Mac</ExternalSourcesOutputRoot>
+	</RootPaths>
+	<DialogueEvents/>
+	<StreamedFiles/>
+	<MediaFilesNotInAnyBank/>
+	<SoundBanks>
+		<SoundBank Id="1355168291" Language="SFX" Hash="747786009">
+			<ObjectPath>Init</ObjectPath>
+			<ShortName>Init</ShortName>
+			<Path>Init.bnk</Path>
+		</SoundBank>
+		<SoundBank Id="4009941598" Language="SFX" Hash="231806768">
+			<ObjectPath>\SoundBanks\Default Work Unit\Official</ObjectPath>
+			<ShortName>Official</ShortName>
+			<Path>Official.bnk</Path>
+			<IncludedEvents>
+				<Event Id="3174479978" Name="Play_Ambiance" ObjectPath="\Events\Default Work Unit\Play_Ambiance">
+					<IncludedMemoryFiles>
+						<File Id="4831832" Language="SFX">
+							<ShortName>SFX_Car_Horn_13.wav</ShortName>
+							<Path>SFX\SFX_Car_Horn_13_3F75BDB9.wem</Path>
+						</File>
+						<File Id="12853039" Language="SFX">
+							<ShortName>SFX_Car_Horn_5.wav</ShortName>
+							<Path>SFX\SFX_Car_Horn_5_3F75BDB9.wem</Path>
+						</File>
+						<File Id="36129346" Language="SFX">
+							<ShortName>SFX_Car_Horn_26.wav</ShortName>
+							<Path>SFX\SFX_Car_Horn_26_3F75BDB9.wem</Path>
+						</File>
+						<File Id="48412455" Language="SFX">
+							<ShortName>SFX_Car_Horn_14.wav</ShortName>
+							<Path>SFX\SFX_Car_Horn_14_3F75BDB9.wem</Path>
+						</File>
+						<File Id="113597712" Language="SFX">
+							<ShortName>SFX_Car_Horn_9.wav</ShortName>
+							<Path>SFX\SFX_Car_Horn_9_3F75BDB9.wem</Path>
+						</File>
+						<File Id="116349255" Language="SFX">
+							<ShortName>SFX_Car_Horn_3.wav</ShortName>
+							<Path>SFX\SFX_Car_Horn_3_3F75BDB9.wem</Path>
+						</File>
+						<File Id="200390795" Language="SFX">
+							<ShortName>SFX_Car_Horn_23.wav</ShortName>
+							<Path>SFX\SFX_Car_Horn_23_3F75BDB9.wem</Path>
+						</File>
+						<File Id="220261236" Language="SFX">
+							<ShortName>SFX_Car_Horn_6.wav</ShortName>
+							<Path>SFX\SFX_Car_Horn_6_3F75BDB9.wem</Path>
+						</File>
+						<File Id="288106598" Language="SFX">
+							<ShortName>SFX_Car_Horn_8.wav</ShortName>
+							<Path>SFX\SFX_Car_Horn_8_3F75BDB9.wem</Path>
+						</File>
+						<File Id="367991471" Language="SFX">
+							<ShortName>SFX_Car_Horn_16.wav</ShortName>
+							<Path>SFX\SFX_Car_Horn_16_3F75BDB9.wem</Path>
+						</File>
+						<File Id="401544186" Language="SFX">
+							<ShortName>SFX_Car_Horn_4.wav</ShortName>
+							<Path>SFX\SFX_Car_Horn_4_3F75BDB9.wem</Path>
+						</File>
+						<File Id="416945339" Language="SFX">
+							<ShortName>SFX_Car_Horn_21.wav</ShortName>
+							<Path>SFX\SFX_Car_Horn_21_3F75BDB9.wem</Path>
+						</File>
+						<File Id="432407804" Language="SFX">
+							<ShortName>SFX_Car_Horn_19.wav</ShortName>
+							<Path>SFX\SFX_Car_Horn_19_3F75BDB9.wem</Path>
+						</File>
+						<File Id="455434578" Language="SFX">
+							<ShortName>SFX_Car_Horn_12.wav</ShortName>
+							<Path>SFX\SFX_Car_Horn_12_3F75BDB9.wem</Path>
+						</File>
+						<File Id="469872040" Language="SFX">
+							<ShortName>SFX_Car_Horn_22.wav</ShortName>
+							<Path>SFX\SFX_Car_Horn_22_3F75BDB9.wem</Path>
+						</File>
+						<File Id="540544863" Language="SFX">
+							<ShortName>SFX_Car_Horn_28.wav</ShortName>
+							<Path>SFX\SFX_Car_Horn_28_3F75BDB9.wem</Path>
+						</File>
+						<File Id="615977405" Language="SFX">
+							<ShortName>SFX_Car_Horn_27.wav</ShortName>
+							<Path>SFX\SFX_Car_Horn_27_3F75BDB9.wem</Path>
+						</File>
+						<File Id="662207006" Language="SFX">
+							<ShortName>SFX_Car_Horn_24.wav</ShortName>
+							<Path>SFX\SFX_Car_Horn_24_3F75BDB9.wem</Path>
+						</File>
+						<File Id="740195818" Language="SFX">
+							<ShortName>SFX_Car_Horn_20.wav</ShortName>
+							<Path>SFX\SFX_Car_Horn_20_3F75BDB9.wem</Path>
+						</File>
+						<File Id="763457563" Language="SFX">
+							<ShortName>SFX_Car_Horn_7.wav</ShortName>
+							<Path>SFX\SFX_Car_Horn_7_3F75BDB9.wem</Path>
+						</File>
+						<File Id="786354683" Language="SFX">
+							<ShortName>SFX_Car_Horn_18.wav</ShortName>
+							<Path>SFX\SFX_Car_Horn_18_3F75BDB9.wem</Path>
+						</File>
+						<File Id="820914468" Language="SFX">
+							<ShortName>SFX_Car_Horn_17.wav</ShortName>
+							<Path>SFX\SFX_Car_Horn_17_3F75BDB9.wem</Path>
+						</File>
+						<File Id="846373316" Language="SFX">
+							<ShortName>SFX_Car_Horn_11.wav</ShortName>
+							<Path>SFX\SFX_Car_Horn_11_3F75BDB9.wem</Path>
+						</File>
+						<File Id="886777713" Language="SFX">
+							<ShortName>SFX_Car_Horn_25.wav</ShortName>
+							<Path>SFX\SFX_Car_Horn_25_3F75BDB9.wem</Path>
+						</File>
+						<File Id="919802195" Language="SFX">
+							<ShortName>SFX_Car_Horn_10.wav</ShortName>
+							<Path>SFX\SFX_Car_Horn_10_3F75BDB9.wem</Path>
+						</File>
+						<File Id="925697344" Language="SFX">
+							<ShortName>SFX_Car_Horn_15.wav</ShortName>
+							<Path>SFX\SFX_Car_Horn_15_3F75BDB9.wem</Path>
+						</File>
+						<File Id="934882911" Language="SFX">
+							<ShortName>SFX_Car_Horn_2.wav</ShortName>
+							<Path>SFX\SFX_Car_Horn_2_3F75BDB9.wem</Path>
+						</File>
+						<File Id="1014366094" Language="SFX">
+							<ShortName>SFX_Car_Horn_1 .wav</ShortName>
+							<Path>SFX\SFX_Car_Horn_1 _3F75BDB9.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="3854155799" Name="Play_Footsteps" ObjectPath="\Events\Default Work Unit\Play_Footsteps">
+					<IncludedMemoryFiles>
+						<File Id="270338045" Language="SFX">
+							<ShortName>FS-004.wav</ShortName>
+							<Path>SFX\FS-004_3F75BDB9.wem</Path>
+						</File>
+						<File Id="615156298" Language="SFX">
+							<ShortName>FS-005.wav</ShortName>
+							<Path>SFX\FS-005_3F75BDB9.wem</Path>
+						</File>
+						<File Id="641567632" Language="SFX">
+							<ShortName>FS-002.wav</ShortName>
+							<Path>SFX\FS-002_3F75BDB9.wem</Path>
+						</File>
+						<File Id="752144095" Language="SFX">
+							<ShortName>FS-001.wav</ShortName>
+							<Path>SFX\FS-001_3F75BDB9.wem</Path>
+						</File>
+						<File Id="878886696" Language="SFX">
+							<ShortName>FS-006.wav</ShortName>
+							<Path>SFX\FS-006_3F75BDB9.wem</Path>
+						</File>
+						<File Id="881531476" Language="SFX">
+							<ShortName>FS-003.wav</ShortName>
+							<Path>SFX\FS-003_3F75BDB9.wem</Path>
+						</File>
+						<File Id="901000400" Language="SFX">
+							<ShortName>FS-007.wav</ShortName>
+							<Path>SFX\FS-007_3F75BDB9.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="3737014274" Name="Play_Gameplay" ObjectPath="\Events\Default Work Unit\Play_Gameplay">
+					<IncludedMemoryFiles>
+						<File Id="918621499" Language="SFX">
+							<ShortName>ER_Lvl1Music.wav</ShortName>
+							<Path>SFX\ER_Lvl1Music_9EDFC787.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="3306210749" Name="Play_Main_Menu" ObjectPath="\Events\Default Work Unit\Play_Main_Menu">
+					<IncludedMemoryFiles>
+						<File Id="532191630" Language="SFX">
+							<ShortName>Song For Rooftop Runner 02.wav</ShortName>
+							<Path>SFX\Song For Rooftop Runner 02_9EDFC787.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="3833599577" Name="Play_SFX_Coin" ObjectPath="\Events\Default Work Unit\Play_SFX_Coin">
+					<IncludedMemoryFiles>
+						<File Id="397217052" Language="SFX">
+							<ShortName>SFX_Coin.wav</ShortName>
+							<Path>SFX\SFX_Coin_3F75BDB9.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="776917868" Name="Play_SFX_Dumpster" ObjectPath="\Events\Default Work Unit\Play_SFX_Dumpster">
+					<IncludedMemoryFiles>
+						<File Id="1029506877" Language="SFX">
+							<ShortName>SFX_Dumpster.wav</ShortName>
+							<Path>SFX\SFX_Dumpster_3F75BDB9.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="2514707895" Name="Play_SFX_Explosion" ObjectPath="\Events\Default Work Unit\Play_SFX_Explosion">
+					<IncludedMemoryFiles>
+						<File Id="816575531" Language="SFX">
+							<ShortName>SFX_Explosion.wav</ShortName>
+							<Path>SFX\SFX_Explosion_3F75BDB9.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="3740002126" Name="Play_SFX_Jump" ObjectPath="\Events\Default Work Unit\Play_SFX_Jump">
+					<IncludedMemoryFiles>
+						<File Id="620775869" Language="SFX">
+							<ShortName>SFX_Jump.wav</ShortName>
+							<Path>SFX\SFX_Jump_3F75BDB9.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="751878650" Name="Play_SFX_Menu_Confirm" ObjectPath="\Events\Default Work Unit\Play_SFX_Menu_Confirm">
+					<IncludedMemoryFiles>
+						<File Id="513906901" Language="SFX">
+							<ShortName>SFX_Menu_Confirm.wav</ShortName>
+							<Path>SFX\SFX_Menu_Confirm_3F75BDB9.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="3759090466" Name="Play_SFX_Menu_Select" ObjectPath="\Events\Default Work Unit\Play_SFX_Menu_Select">
+					<IncludedMemoryFiles>
+						<File Id="207803033" Language="SFX">
+							<ShortName>SFX_Menu_Select.wav</ShortName>
+							<Path>SFX\SFX_Menu_Select_3F75BDB9.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="1721105142" Name="Play_SFX_Throw" ObjectPath="\Events\Default Work Unit\Play_SFX_Throw">
+					<IncludedMemoryFiles>
+						<File Id="446096920" Language="SFX">
+							<ShortName>SFX_Throw.wav</ShortName>
+							<Path>SFX\SFX_Throw_3F75BDB9.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="2189089152" Name="Play_VO_Death_1" ObjectPath="\Events\Default Work Unit\Play_VO_Death_1">
+					<IncludedMemoryFiles>
+						<File Id="420732443" Language="SFX">
+							<ShortName>VO_Death_1.wav</ShortName>
+							<Path>SFX\VO_Death_1_3F75BDB9.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="2839405212" Name="Stop_Ambiance" ObjectPath="\Events\Default Work Unit\Stop_Ambiance"/>
+				<Event Id="2245059084" Name="Stop_Gameplay" ObjectPath="\Events\Default Work Unit\Stop_Gameplay"/>
+				<Event Id="774860123" Name="Stop_Main_Menu" ObjectPath="\Events\Default Work Unit\Stop_Main_Menu"/>
+			</IncludedEvents>
+		</SoundBank>
+	</SoundBanks>
+</SoundBanksInfo>

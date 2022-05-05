@@ -46,10 +46,12 @@ public class EscapeMenu : MonoBehaviour
     }
 
     public void OnResumePressed() {
+        AkSoundEngine.PostEvent("Play_SFX_Menu_Confirm", this.gameObject);
         HideMenu();
     }
     
     public void OnLeavePressed() {
+        AkSoundEngine.PostEvent("Play_SFX_Menu_Confirm", this.gameObject);
         sceneLoader.allowSceneActivation = true;
     }
 }
