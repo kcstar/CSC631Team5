@@ -1,0 +1,1976 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{140E8692-0606-4EF2-AAAC-D31993B7C052}" SchemaVersion="103">
+	<AudioObjects>
+		<WorkUnit Name="Default Work Unit" ID="{140E8692-0606-4EF2-AAAC-D31993B7C052}" PersistMode="Standalone">
+			<ChildrenList>
+				<ActorMixer Name="SFX" ID="{B3064C81-042B-4D5E-8F7F-C20AE523DC8E}" ShortID="763098703">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Vorbis Quality High" ID="{53A9DE0F-3F4F-4B59-8614-3F9E3C7358FC}" WorkUnitID="{F6B2880C-85E5-47FA-A126-645B5DFD9ACC}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="SFX" ID="{2B64D42B-73BA-46DD-89EA-9E96D1B8BA5F}" WorkUnitID="{DD87CA62-7EBB-4464-9491-E586973CBA5C}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="SFX_Coin" ID="{E3AD73D3-43B7-40DA-AFCC-F39FC80E988B}" ShortID="578058201">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>8</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B3583AF1-8D28-4F4D-B419-193D520874E1}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{DD87CA62-7EBB-4464-9491-E586973CBA5C}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="SFX_Coin" ID="{3215B828-EA62-4367-80A0-14EA98425199}">
+									<Language>SFX</Language>
+									<AudioFile>SFX_Coin.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="397217052"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="SFX_Coin" ID="{3215B828-EA62-4367-80A0-14EA98425199}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="SFX_Dumpster" ID="{D551646F-6AEE-4680-ACDE-F9DF66FA3E7D}" ShortID="537799547">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B3583AF1-8D28-4F4D-B419-193D520874E1}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{DD87CA62-7EBB-4464-9491-E586973CBA5C}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="SFX_Dumpster" ID="{31DE65C2-8184-4BA7-B8F9-EF4BA6DFC3EC}">
+									<Language>SFX</Language>
+									<AudioFile>SFX_Dumpster.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="1029506877"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="SFX_Dumpster" ID="{31DE65C2-8184-4BA7-B8F9-EF4BA6DFC3EC}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="SFX_Explosion" ID="{785CE4A9-3C2F-4298-A84C-5988EB056CF8}" ShortID="872999409">
+							<PropertyList>
+								<Property Name="Highpass" Type="int16">
+									<ValueList>
+										<Value>20</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B3583AF1-8D28-4F4D-B419-193D520874E1}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{DD87CA62-7EBB-4464-9491-E586973CBA5C}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="SFX_Explosion" ID="{749D125A-B18B-4494-BF8C-1929678F5DCF}">
+									<Language>SFX</Language>
+									<AudioFile>SFX_Explosion.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="816575531"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="SFX_Explosion" ID="{749D125A-B18B-4494-BF8C-1929678F5DCF}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="SFX_Jump" ID="{BFA556F1-BF44-4214-A7BD-FF73E0B3D441}" ShortID="1059086122">
+							<PropertyList>
+								<Property Name="Highpass" Type="int16">
+									<ValueList>
+										<Value>30</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>8</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B3583AF1-8D28-4F4D-B419-193D520874E1}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{DD87CA62-7EBB-4464-9491-E586973CBA5C}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="SFX_Jump" ID="{689CE322-E35C-448E-B2DE-826F90621011}">
+									<Language>SFX</Language>
+									<AudioFile>SFX_Jump.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="620775869"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="SFX_Jump" ID="{689CE322-E35C-448E-B2DE-826F90621011}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="SFX_Menu_Confirm" ID="{E5775EDC-C9AB-4F68-8A63-97759BF6BC37}" ShortID="495405826">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B3583AF1-8D28-4F4D-B419-193D520874E1}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{DD87CA62-7EBB-4464-9491-E586973CBA5C}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="SFX_Menu_Confirm" ID="{C67BA918-AE7E-4E0B-9FC2-5BD80CAFCBEF}">
+									<Language>SFX</Language>
+									<AudioFile>SFX_Menu_Confirm.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="513906901"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="SFX_Menu_Confirm" ID="{C67BA918-AE7E-4E0B-9FC2-5BD80CAFCBEF}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="SFX_Menu_Select" ID="{136019A6-3C3B-4F57-86E3-12CEAF56456A}" ShortID="70902312">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B3583AF1-8D28-4F4D-B419-193D520874E1}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{DD87CA62-7EBB-4464-9491-E586973CBA5C}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="SFX_Menu_Select" ID="{BFD48BE6-0823-4652-B8CA-55096924AA29}">
+									<Language>SFX</Language>
+									<AudioFile>SFX_Menu_Select.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="207803033"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="SFX_Menu_Select" ID="{BFD48BE6-0823-4652-B8CA-55096924AA29}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="SFX_Throw" ID="{BE39CD09-01A5-45B4-941C-864049A806C9}" ShortID="838905996">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B3583AF1-8D28-4F4D-B419-193D520874E1}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{DD87CA62-7EBB-4464-9491-E586973CBA5C}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="SFX_Throw" ID="{B9ADBB57-ED79-4B80-95A6-46A82BF50081}">
+									<Language>SFX</Language>
+									<AudioFile>SFX_Throw.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="446096920"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="SFX_Throw" ID="{B9ADBB57-ED79-4B80-95A6-46A82BF50081}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<RandomSequenceContainer Name="Footsteps" ID="{3C8CD5CE-4033-4023-8DAA-E8FB7A943BFF}" ShortID="301124151">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-8</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B3583AF1-8D28-4F4D-B419-193D520874E1}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{DD87CA62-7EBB-4464-9491-E586973CBA5C}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="FS-001" ID="{E899D37B-59C5-4960-B931-83378A850F97}" ShortID="929780491">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B3583AF1-8D28-4F4D-B419-193D520874E1}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="SFX" ID="{2B64D42B-73BA-46DD-89EA-9E96D1B8BA5F}" WorkUnitID="{DD87CA62-7EBB-4464-9491-E586973CBA5C}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="FS-001" ID="{E0CBD6FC-576D-4A82-8E12-B00108C9E0D6}">
+											<Language>SFX</Language>
+											<AudioFile>FS-001.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="752144095"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists/>
+									<ActiveSourceList>
+										<ActiveSource Name="FS-001" ID="{E0CBD6FC-576D-4A82-8E12-B00108C9E0D6}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="FS-002" ID="{3E0DE503-2E0B-4042-BECA-F6AEAFFF1116}" ShortID="382233123">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B3583AF1-8D28-4F4D-B419-193D520874E1}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="SFX" ID="{2B64D42B-73BA-46DD-89EA-9E96D1B8BA5F}" WorkUnitID="{DD87CA62-7EBB-4464-9491-E586973CBA5C}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="FS-002" ID="{6082E17D-D39F-4831-BE58-FBBD59A9BB4E}">
+											<Language>SFX</Language>
+											<AudioFile>FS-002.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="641567632"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists/>
+									<ActiveSourceList>
+										<ActiveSource Name="FS-002" ID="{6082E17D-D39F-4831-BE58-FBBD59A9BB4E}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="FS-003" ID="{26ED3D6B-1EA5-4F7E-B1FC-31679E8F01B7}" ShortID="131310532">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B3583AF1-8D28-4F4D-B419-193D520874E1}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="SFX" ID="{2B64D42B-73BA-46DD-89EA-9E96D1B8BA5F}" WorkUnitID="{DD87CA62-7EBB-4464-9491-E586973CBA5C}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="FS-003" ID="{7102235F-B703-417E-86CF-56009C2E957D}">
+											<Language>SFX</Language>
+											<AudioFile>FS-003.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="881531476"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists/>
+									<ActiveSourceList>
+										<ActiveSource Name="FS-003" ID="{7102235F-B703-417E-86CF-56009C2E957D}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="FS-005" ID="{EDFBED43-8291-4894-8F38-5123EADF3D39}" ShortID="569316591">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B3583AF1-8D28-4F4D-B419-193D520874E1}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="SFX" ID="{2B64D42B-73BA-46DD-89EA-9E96D1B8BA5F}" WorkUnitID="{DD87CA62-7EBB-4464-9491-E586973CBA5C}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="FS-005" ID="{92F14ECC-235A-4F12-925E-08FF26938EA5}">
+											<Language>SFX</Language>
+											<AudioFile>FS-005.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="615156298"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists/>
+									<ActiveSourceList>
+										<ActiveSource Name="FS-005" ID="{92F14ECC-235A-4F12-925E-08FF26938EA5}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="FS-004" ID="{BB0D298F-8082-4491-A0AD-45C2CA3BE184}" ShortID="882799382">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B3583AF1-8D28-4F4D-B419-193D520874E1}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="SFX" ID="{2B64D42B-73BA-46DD-89EA-9E96D1B8BA5F}" WorkUnitID="{DD87CA62-7EBB-4464-9491-E586973CBA5C}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="FS-004" ID="{B3E98B3D-7FB4-453E-82B9-A0DFBDA673D2}">
+											<Language>SFX</Language>
+											<AudioFile>FS-004.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="270338045"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists/>
+									<ActiveSourceList>
+										<ActiveSource Name="FS-004" ID="{B3E98B3D-7FB4-453E-82B9-A0DFBDA673D2}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="FS-006" ID="{516F04CC-B77B-42B7-9B73-6C66413C5FC7}" ShortID="854574247">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B3583AF1-8D28-4F4D-B419-193D520874E1}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="SFX" ID="{2B64D42B-73BA-46DD-89EA-9E96D1B8BA5F}" WorkUnitID="{DD87CA62-7EBB-4464-9491-E586973CBA5C}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="FS-006" ID="{84A0146B-2627-45C4-9C59-4CD17CEA4446}">
+											<Language>SFX</Language>
+											<AudioFile>FS-006.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="878886696"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists/>
+									<ActiveSourceList>
+										<ActiveSource Name="FS-006" ID="{84A0146B-2627-45C4-9C59-4CD17CEA4446}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="FS-007" ID="{9DFD20DF-E8FD-43D8-A70B-C0E5D19869E8}" ShortID="837974909">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B3583AF1-8D28-4F4D-B419-193D520874E1}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="SFX" ID="{2B64D42B-73BA-46DD-89EA-9E96D1B8BA5F}" WorkUnitID="{DD87CA62-7EBB-4464-9491-E586973CBA5C}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="FS-007" ID="{C53B451D-32E7-4A5D-A370-AE9B968E6096}">
+											<Language>SFX</Language>
+											<AudioFile>FS-007.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="901000400"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists/>
+									<ActiveSourceList>
+										<ActiveSource Name="FS-007" ID="{C53B451D-32E7-4A5D-A370-AE9B968E6096}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+							<ObjectLists/>
+						</RandomSequenceContainer>
+						<BlendContainer Name="Ambiance" ID="{6C2B84DA-ED1C-46BD-9D59-11C174C11378}" ShortID="250056507">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B3583AF1-8D28-4F4D-B419-193D520874E1}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{DD87CA62-7EBB-4464-9491-E586973CBA5C}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<RandomSequenceContainer Name="Car_Horns" ID="{205DB39B-4015-4386-B1B3-F7E8E2D314C9}" ShortID="890869963">
+									<PropertyList>
+										<Property Name="OverrideEffect" Type="bool" Value="True"/>
+										<Property Name="Pitch" Type="int32">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{F35AD43C-845A-4B4E-8907-12C962CF06E0}">
+														<PropertyList>
+															<Property Name="Max" Type="Real64" Value="500"/>
+															<Property Name="Min" Type="Real64" Value="-500"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+										<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
+										<Property Name="PlayMechanismSpecialTransitionsType" Type="int16" Value="1"/>
+										<Property Name="PlayMechanismSpecialTransitionsValue" Type="Real64" Value="10">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{8AFA4E57-7F1D-46A6-97EE-E941DAEEE5F2}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Min" Type="Real64" Value="-10"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+										<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>4</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B3583AF1-8D28-4F4D-B419-193D520874E1}"/>
+										</Reference>
+										<Reference Name="Effect0" PluginName="Wwise RoomVerb" CompanyID="0" PluginID="118" PluginType="3">
+											<ObjectRef Name="Have_U_Ever_Been_Outside" ID="{FE29AE8D-FD86-4652-A95D-68D32F5760EC}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{DD87CA62-7EBB-4464-9491-E586973CBA5C}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="SFX_Car_Horn_27" ID="{227C8DDC-7076-43A6-B0BB-94FCCD5A0E18}" ShortID="77974063">
+											<PropertyList>
+												<Property Name="Pitch" Type="int32">
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{DB29E115-DBDC-4F7A-A74E-40D7FC624FA5}">
+																<PropertyList>
+																	<Property Name="Enabled" Type="bool" Value="True"/>
+																	<Property Name="Min" Type="Real64" Value="-500"/>
+																</PropertyList>
+															</Modifier>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+												<Property Name="Volume" Type="Real64">
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{EAD05A0B-B103-44B7-BA32-19EC3B6D8607}">
+																<PropertyList>
+																	<Property Name="Min" Type="Real64" Value="-10"/>
+																</PropertyList>
+															</Modifier>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+												<Property Name="Weight" Type="Real64">
+													<ValueList>
+														<Value>2</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B3583AF1-8D28-4F4D-B419-193D520874E1}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="SFX" ID="{2B64D42B-73BA-46DD-89EA-9E96D1B8BA5F}" WorkUnitID="{DD87CA62-7EBB-4464-9491-E586973CBA5C}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SFX_Car_Horn_27" ID="{CEE9502F-E676-4B8C-A9D6-396BA8D36B94}">
+													<Language>SFX</Language>
+													<AudioFile>SFX_Car_Horn_27.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="615977405"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists/>
+											<ActiveSourceList>
+												<ActiveSource Name="SFX_Car_Horn_27" ID="{CEE9502F-E676-4B8C-A9D6-396BA8D36B94}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="SFX_Car_Horn_28" ID="{E5BF9976-DB94-411F-91C1-63804F82DB0F}" ShortID="349000306">
+											<PropertyList>
+												<Property Name="Pitch" Type="int32">
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{35A875BD-2425-476D-8F8F-45AA8EE4D4D6}">
+																<PropertyList>
+																	<Property Name="Enabled" Type="bool" Value="True"/>
+																	<Property Name="Min" Type="Real64" Value="-500"/>
+																</PropertyList>
+															</Modifier>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+												<Property Name="Volume" Type="Real64">
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{79D55274-0695-4621-83B6-BA5D9340CA44}">
+																<PropertyList>
+																	<Property Name="Min" Type="Real64" Value="-10"/>
+																</PropertyList>
+															</Modifier>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+												<Property Name="Weight" Type="Real64">
+													<ValueList>
+														<Value>2</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B3583AF1-8D28-4F4D-B419-193D520874E1}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="SFX" ID="{2B64D42B-73BA-46DD-89EA-9E96D1B8BA5F}" WorkUnitID="{DD87CA62-7EBB-4464-9491-E586973CBA5C}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SFX_Car_Horn_28" ID="{2BE3B0DF-8B65-4FA1-A920-F610CDAEDE5C}">
+													<Language>SFX</Language>
+													<AudioFile>SFX_Car_Horn_28.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="540544863"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists/>
+											<ActiveSourceList>
+												<ActiveSource Name="SFX_Car_Horn_28" ID="{2BE3B0DF-8B65-4FA1-A920-F610CDAEDE5C}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="SFX_Car_Horn_19" ID="{3A0D2F6F-9A3F-47A8-8296-423B81316950}" ShortID="965167111">
+											<PropertyList>
+												<Property Name="Pitch" Type="int32">
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{87592285-F9C8-48AE-A5DF-F3CE8085D96A}">
+																<PropertyList>
+																	<Property Name="Enabled" Type="bool" Value="True"/>
+																	<Property Name="Min" Type="Real64" Value="-500"/>
+																</PropertyList>
+															</Modifier>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+												<Property Name="Volume" Type="Real64">
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{9C821175-08E1-4170-9403-E40AC5E72A62}">
+																<PropertyList>
+																	<Property Name="Min" Type="Real64" Value="-10"/>
+																</PropertyList>
+															</Modifier>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+												<Property Name="Weight" Type="Real64">
+													<ValueList>
+														<Value>2</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B3583AF1-8D28-4F4D-B419-193D520874E1}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="SFX" ID="{2B64D42B-73BA-46DD-89EA-9E96D1B8BA5F}" WorkUnitID="{DD87CA62-7EBB-4464-9491-E586973CBA5C}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SFX_Car_Horn_19" ID="{6E339718-2C9A-4A3C-BE17-CCD666D5A071}">
+													<Language>SFX</Language>
+													<AudioFile>SFX_Car_Horn_19.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="432407804"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists/>
+											<ActiveSourceList>
+												<ActiveSource Name="SFX_Car_Horn_19" ID="{6E339718-2C9A-4A3C-BE17-CCD666D5A071}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="SFX_Car_Horn_1" ID="{4C88F365-4359-4A80-BF16-1109C45A62FD}" ShortID="301499270">
+											<PropertyList>
+												<Property Name="Pitch" Type="int32">
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{4C3605A1-6075-4766-ADEA-1FC5E73138FF}">
+																<PropertyList>
+																	<Property Name="Enabled" Type="bool" Value="True"/>
+																	<Property Name="Min" Type="Real64" Value="-500"/>
+																</PropertyList>
+															</Modifier>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>-9</Value>
+													</ValueList>
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{F7C8E9D6-DBF1-4F9E-836B-3ED1845E2B59}">
+																<PropertyList>
+																	<Property Name="Min" Type="Real64" Value="-10"/>
+																</PropertyList>
+															</Modifier>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+												<Property Name="Weight" Type="Real64">
+													<ValueList>
+														<Value>0.1</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B3583AF1-8D28-4F4D-B419-193D520874E1}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="SFX" ID="{2B64D42B-73BA-46DD-89EA-9E96D1B8BA5F}" WorkUnitID="{DD87CA62-7EBB-4464-9491-E586973CBA5C}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SFX_Car_Horn_1" ID="{ADC47BE6-5FC6-4AE9-8B4F-D1A8D2B13E50}">
+													<Language>SFX</Language>
+													<AudioFile>SFX_Car_Horn_1 .wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="1014366094"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists/>
+											<ActiveSourceList>
+												<ActiveSource Name="SFX_Car_Horn_1" ID="{ADC47BE6-5FC6-4AE9-8B4F-D1A8D2B13E50}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="SFX_Car_Horn_11" ID="{960A52EB-C56E-45BB-8056-E82B6E92DB29}" ShortID="76013034">
+											<PropertyList>
+												<Property Name="Pitch" Type="int32">
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{FAEC5275-0251-439C-B8DE-8F1875219D5D}">
+																<PropertyList>
+																	<Property Name="Enabled" Type="bool" Value="True"/>
+																	<Property Name="Min" Type="Real64" Value="-500"/>
+																</PropertyList>
+															</Modifier>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+												<Property Name="Volume" Type="Real64">
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{60189A5F-0A51-484D-96C6-0CD7148AEB0E}">
+																<PropertyList>
+																	<Property Name="Min" Type="Real64" Value="-10"/>
+																</PropertyList>
+															</Modifier>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+												<Property Name="Weight" Type="Real64">
+													<ValueList>
+														<Value>2</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B3583AF1-8D28-4F4D-B419-193D520874E1}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="SFX" ID="{2B64D42B-73BA-46DD-89EA-9E96D1B8BA5F}" WorkUnitID="{DD87CA62-7EBB-4464-9491-E586973CBA5C}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SFX_Car_Horn_11" ID="{C9760014-B997-49C9-AB57-03F3254DC44B}">
+													<Language>SFX</Language>
+													<AudioFile>SFX_Car_Horn_11.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="846373316"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists/>
+											<ActiveSourceList>
+												<ActiveSource Name="SFX_Car_Horn_11" ID="{C9760014-B997-49C9-AB57-03F3254DC44B}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="SFX_Car_Horn_10" ID="{770DBCC8-2D07-464A-8942-BF4A0D292787}" ShortID="977705247">
+											<PropertyList>
+												<Property Name="Pitch" Type="int32">
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{E0291056-0BC9-4CBE-8BF8-00B8664A899C}">
+																<PropertyList>
+																	<Property Name="Enabled" Type="bool" Value="True"/>
+																	<Property Name="Min" Type="Real64" Value="-500"/>
+																</PropertyList>
+															</Modifier>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+												<Property Name="Volume" Type="Real64">
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{02DEC155-E17F-415E-AA20-42AB771AA639}">
+																<PropertyList>
+																	<Property Name="Min" Type="Real64" Value="-10"/>
+																</PropertyList>
+															</Modifier>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+												<Property Name="Weight" Type="Real64">
+													<ValueList>
+														<Value>2</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B3583AF1-8D28-4F4D-B419-193D520874E1}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="SFX" ID="{2B64D42B-73BA-46DD-89EA-9E96D1B8BA5F}" WorkUnitID="{DD87CA62-7EBB-4464-9491-E586973CBA5C}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SFX_Car_Horn_10" ID="{5BF2CB7D-B2B2-45B8-919E-B10A30F121E6}">
+													<Language>SFX</Language>
+													<AudioFile>SFX_Car_Horn_10.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="919802195"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists/>
+											<ActiveSourceList>
+												<ActiveSource Name="SFX_Car_Horn_10" ID="{5BF2CB7D-B2B2-45B8-919E-B10A30F121E6}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="SFX_Car_Horn_5" ID="{4F935CC0-26CE-4F60-B6FF-FF00B7F25BAD}" ShortID="963086101">
+											<PropertyList>
+												<Property Name="Pitch" Type="int32">
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{E246F556-F822-4676-BDE3-BD01EBE149E3}">
+																<PropertyList>
+																	<Property Name="Enabled" Type="bool" Value="True"/>
+																	<Property Name="Min" Type="Real64" Value="-500"/>
+																</PropertyList>
+															</Modifier>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>-8</Value>
+													</ValueList>
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{B7C99DF6-22FF-4D41-B41C-9A11968E66B4}">
+																<PropertyList>
+																	<Property Name="Min" Type="Real64" Value="-10"/>
+																</PropertyList>
+															</Modifier>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+												<Property Name="Weight" Type="Real64">
+													<ValueList>
+														<Value>2</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B3583AF1-8D28-4F4D-B419-193D520874E1}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="SFX" ID="{2B64D42B-73BA-46DD-89EA-9E96D1B8BA5F}" WorkUnitID="{DD87CA62-7EBB-4464-9491-E586973CBA5C}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SFX_Car_Horn_5" ID="{2E4BBFF9-D778-4FD9-8105-032BFB05BFCF}">
+													<Language>SFX</Language>
+													<AudioFile>SFX_Car_Horn_5.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="12853039"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists/>
+											<ActiveSourceList>
+												<ActiveSource Name="SFX_Car_Horn_5" ID="{2E4BBFF9-D778-4FD9-8105-032BFB05BFCF}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="SFX_Car_Horn_16" ID="{FD71AA44-D5F7-4633-996D-11FD208F8026}" ShortID="697134541">
+											<PropertyList>
+												<Property Name="Pitch" Type="int32">
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{7392315B-4504-4A3D-89AB-F8D96A0F36ED}">
+																<PropertyList>
+																	<Property Name="Enabled" Type="bool" Value="True"/>
+																	<Property Name="Min" Type="Real64" Value="-500"/>
+																</PropertyList>
+															</Modifier>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+												<Property Name="Volume" Type="Real64">
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{2677566A-1B1E-4713-BCD5-ACDC13B5DEB1}">
+																<PropertyList>
+																	<Property Name="Min" Type="Real64" Value="-10"/>
+																</PropertyList>
+															</Modifier>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+												<Property Name="Weight" Type="Real64">
+													<ValueList>
+														<Value>2</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B3583AF1-8D28-4F4D-B419-193D520874E1}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="SFX" ID="{2B64D42B-73BA-46DD-89EA-9E96D1B8BA5F}" WorkUnitID="{DD87CA62-7EBB-4464-9491-E586973CBA5C}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SFX_Car_Horn_16" ID="{F19D331F-3B0E-44E4-8271-1D02042D1318}">
+													<Language>SFX</Language>
+													<AudioFile>SFX_Car_Horn_16.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="367991471"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists/>
+											<ActiveSourceList>
+												<ActiveSource Name="SFX_Car_Horn_16" ID="{F19D331F-3B0E-44E4-8271-1D02042D1318}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="SFX_Car_Horn_23" ID="{9D05B080-DAA5-41C0-AB31-3F421D8B71BE}" ShortID="985997819">
+											<PropertyList>
+												<Property Name="Pitch" Type="int32">
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{7319EEBF-0D8F-4AE2-B7C4-6064FD375AA8}">
+																<PropertyList>
+																	<Property Name="Enabled" Type="bool" Value="True"/>
+																	<Property Name="Min" Type="Real64" Value="-500"/>
+																</PropertyList>
+															</Modifier>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+												<Property Name="Volume" Type="Real64">
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{4C9B7D55-9E0C-4F12-B5CB-61F506B740F2}">
+																<PropertyList>
+																	<Property Name="Min" Type="Real64" Value="-10"/>
+																</PropertyList>
+															</Modifier>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+												<Property Name="Weight" Type="Real64">
+													<ValueList>
+														<Value>2</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B3583AF1-8D28-4F4D-B419-193D520874E1}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="SFX" ID="{2B64D42B-73BA-46DD-89EA-9E96D1B8BA5F}" WorkUnitID="{DD87CA62-7EBB-4464-9491-E586973CBA5C}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SFX_Car_Horn_23" ID="{2B1EAD4A-8F1A-4A10-9C1F-12FA6C42DF8C}">
+													<Language>SFX</Language>
+													<AudioFile>SFX_Car_Horn_23.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="200390795"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists/>
+											<ActiveSourceList>
+												<ActiveSource Name="SFX_Car_Horn_23" ID="{2B1EAD4A-8F1A-4A10-9C1F-12FA6C42DF8C}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="SFX_Car_Horn_25" ID="{542771F1-DD09-41DF-A2C8-1A9FB3DB3C03}" ShortID="755567870">
+											<PropertyList>
+												<Property Name="Pitch" Type="int32">
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{3EB0E29F-8818-422C-9228-05475CD10550}">
+																<PropertyList>
+																	<Property Name="Enabled" Type="bool" Value="True"/>
+																	<Property Name="Min" Type="Real64" Value="-500"/>
+																</PropertyList>
+															</Modifier>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+												<Property Name="Volume" Type="Real64">
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{DFA892C9-39E5-47C2-915E-4A75FA5AABF7}">
+																<PropertyList>
+																	<Property Name="Min" Type="Real64" Value="-10"/>
+																</PropertyList>
+															</Modifier>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+												<Property Name="Weight" Type="Real64">
+													<ValueList>
+														<Value>2</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B3583AF1-8D28-4F4D-B419-193D520874E1}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="SFX" ID="{2B64D42B-73BA-46DD-89EA-9E96D1B8BA5F}" WorkUnitID="{DD87CA62-7EBB-4464-9491-E586973CBA5C}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SFX_Car_Horn_25" ID="{8AFAEF98-B130-4815-B51C-D90D9A0B027A}">
+													<Language>SFX</Language>
+													<AudioFile>SFX_Car_Horn_25.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="886777713"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists/>
+											<ActiveSourceList>
+												<ActiveSource Name="SFX_Car_Horn_25" ID="{8AFAEF98-B130-4815-B51C-D90D9A0B027A}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="SFX_Car_Horn_26" ID="{21B94803-8321-4145-8206-4297F204783F}" ShortID="891335882">
+											<PropertyList>
+												<Property Name="Pitch" Type="int32">
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{06BE4595-42CC-4D8A-A893-1A4DCB67018C}">
+																<PropertyList>
+																	<Property Name="Enabled" Type="bool" Value="True"/>
+																	<Property Name="Min" Type="Real64" Value="-500"/>
+																</PropertyList>
+															</Modifier>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+												<Property Name="Volume" Type="Real64">
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{BA4F5F29-A49A-4B4B-8284-208DA3F24057}">
+																<PropertyList>
+																	<Property Name="Min" Type="Real64" Value="-10"/>
+																</PropertyList>
+															</Modifier>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+												<Property Name="Weight" Type="Real64">
+													<ValueList>
+														<Value>2</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B3583AF1-8D28-4F4D-B419-193D520874E1}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="SFX" ID="{2B64D42B-73BA-46DD-89EA-9E96D1B8BA5F}" WorkUnitID="{DD87CA62-7EBB-4464-9491-E586973CBA5C}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SFX_Car_Horn_26" ID="{913567F3-4238-4295-B2FB-54A50612E05E}">
+													<Language>SFX</Language>
+													<AudioFile>SFX_Car_Horn_26.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="36129346"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists/>
+											<ActiveSourceList>
+												<ActiveSource Name="SFX_Car_Horn_26" ID="{913567F3-4238-4295-B2FB-54A50612E05E}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="SFX_Car_Horn_7" ID="{6ECC05B2-27E3-4E02-BD8B-D3C7FCB3FF88}" ShortID="999533753">
+											<PropertyList>
+												<Property Name="Pitch" Type="int32">
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{9415D9D2-0CF5-4D42-8B2E-3EE896939083}">
+																<PropertyList>
+																	<Property Name="Enabled" Type="bool" Value="True"/>
+																	<Property Name="Min" Type="Real64" Value="-500"/>
+																</PropertyList>
+															</Modifier>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+												<Property Name="Volume" Type="Real64">
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{D6E333F5-0CB0-4D3D-8A70-4EA2C1E5E64D}">
+																<PropertyList>
+																	<Property Name="Min" Type="Real64" Value="-10"/>
+																</PropertyList>
+															</Modifier>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+												<Property Name="Weight" Type="Real64">
+													<ValueList>
+														<Value>2</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B3583AF1-8D28-4F4D-B419-193D520874E1}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="SFX" ID="{2B64D42B-73BA-46DD-89EA-9E96D1B8BA5F}" WorkUnitID="{DD87CA62-7EBB-4464-9491-E586973CBA5C}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SFX_Car_Horn_7" ID="{285F6CC9-6C26-42B3-8A0C-60F3B25507BE}">
+													<Language>SFX</Language>
+													<AudioFile>SFX_Car_Horn_7.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="763457563"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists/>
+											<ActiveSourceList>
+												<ActiveSource Name="SFX_Car_Horn_7" ID="{285F6CC9-6C26-42B3-8A0C-60F3B25507BE}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="SFX_Car_Horn_4" ID="{BB49F712-105F-420E-B923-7D971410F158}" ShortID="912547890">
+											<PropertyList>
+												<Property Name="Pitch" Type="int32">
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{B496743C-19CC-4D67-86C3-361E69022679}">
+																<PropertyList>
+																	<Property Name="Enabled" Type="bool" Value="True"/>
+																	<Property Name="Min" Type="Real64" Value="-500"/>
+																</PropertyList>
+															</Modifier>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>-5</Value>
+													</ValueList>
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{60A034CE-E6AE-4074-95D6-1ABC0F78F50D}">
+																<PropertyList>
+																	<Property Name="Min" Type="Real64" Value="-10"/>
+																</PropertyList>
+															</Modifier>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+												<Property Name="Weight" Type="Real64">
+													<ValueList>
+														<Value>2</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B3583AF1-8D28-4F4D-B419-193D520874E1}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="SFX" ID="{2B64D42B-73BA-46DD-89EA-9E96D1B8BA5F}" WorkUnitID="{DD87CA62-7EBB-4464-9491-E586973CBA5C}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SFX_Car_Horn_4" ID="{5BD9B401-1856-4FAE-BF30-E97B811D594B}">
+													<Language>SFX</Language>
+													<AudioFile>SFX_Car_Horn_4.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="401544186"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists/>
+											<ActiveSourceList>
+												<ActiveSource Name="SFX_Car_Horn_4" ID="{5BD9B401-1856-4FAE-BF30-E97B811D594B}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="SFX_Car_Horn_2" ID="{C2A82D03-73CB-49FA-A72B-90CB44DC5F88}" ShortID="401455117">
+											<PropertyList>
+												<Property Name="Pitch" Type="int32">
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{908F7068-0DE7-4E16-B76F-36A1505BD818}">
+																<PropertyList>
+																	<Property Name="Enabled" Type="bool" Value="True"/>
+																	<Property Name="Min" Type="Real64" Value="-500"/>
+																</PropertyList>
+															</Modifier>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>-10</Value>
+													</ValueList>
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{FA805175-A2F9-4841-9225-C893A8F6F807}">
+																<PropertyList>
+																	<Property Name="Min" Type="Real64" Value="-10"/>
+																</PropertyList>
+															</Modifier>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+												<Property Name="Weight" Type="Real64">
+													<ValueList>
+														<Value>2</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B3583AF1-8D28-4F4D-B419-193D520874E1}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="SFX" ID="{2B64D42B-73BA-46DD-89EA-9E96D1B8BA5F}" WorkUnitID="{DD87CA62-7EBB-4464-9491-E586973CBA5C}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SFX_Car_Horn_2" ID="{8902D88E-086E-4430-A18B-2A73E63A1B19}">
+													<Language>SFX</Language>
+													<AudioFile>SFX_Car_Horn_2.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="934882911"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists/>
+											<ActiveSourceList>
+												<ActiveSource Name="SFX_Car_Horn_2" ID="{8902D88E-086E-4430-A18B-2A73E63A1B19}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="SFX_Car_Horn_8" ID="{CEDA8A24-EC76-4EA9-A90F-AAADC05C09FD}" ShortID="517783465">
+											<PropertyList>
+												<Property Name="Pitch" Type="int32">
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{5059310E-62C4-41AD-B12F-F7DC6DA673B6}">
+																<PropertyList>
+																	<Property Name="Enabled" Type="bool" Value="True"/>
+																	<Property Name="Min" Type="Real64" Value="-500"/>
+																</PropertyList>
+															</Modifier>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+												<Property Name="Volume" Type="Real64">
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{375F734E-8FCB-4978-BDF3-89CBD0291F28}">
+																<PropertyList>
+																	<Property Name="Min" Type="Real64" Value="-10"/>
+																</PropertyList>
+															</Modifier>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+												<Property Name="Weight" Type="Real64">
+													<ValueList>
+														<Value>2</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B3583AF1-8D28-4F4D-B419-193D520874E1}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="SFX" ID="{2B64D42B-73BA-46DD-89EA-9E96D1B8BA5F}" WorkUnitID="{DD87CA62-7EBB-4464-9491-E586973CBA5C}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SFX_Car_Horn_8" ID="{05F4A981-8E1D-4144-AE35-F4386735F102}">
+													<Language>SFX</Language>
+													<AudioFile>SFX_Car_Horn_8.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="288106598"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists/>
+											<ActiveSourceList>
+												<ActiveSource Name="SFX_Car_Horn_8" ID="{05F4A981-8E1D-4144-AE35-F4386735F102}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="SFX_Car_Horn_9" ID="{EAE9FB7B-0A15-4489-98F8-3D14024F1E5F}" ShortID="893234097">
+											<PropertyList>
+												<Property Name="Pitch" Type="int32">
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{4424AB4E-7462-4AD9-A0CF-3972ED9DFDFA}">
+																<PropertyList>
+																	<Property Name="Enabled" Type="bool" Value="True"/>
+																	<Property Name="Min" Type="Real64" Value="-500"/>
+																</PropertyList>
+															</Modifier>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+												<Property Name="Volume" Type="Real64">
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{B7265F2E-DFF3-402C-AE0C-CA187F5CDD92}">
+																<PropertyList>
+																	<Property Name="Min" Type="Real64" Value="-10"/>
+																</PropertyList>
+															</Modifier>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+												<Property Name="Weight" Type="Real64">
+													<ValueList>
+														<Value>2</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B3583AF1-8D28-4F4D-B419-193D520874E1}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="SFX" ID="{2B64D42B-73BA-46DD-89EA-9E96D1B8BA5F}" WorkUnitID="{DD87CA62-7EBB-4464-9491-E586973CBA5C}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SFX_Car_Horn_9" ID="{46187071-2F4E-4C40-A750-AE61C06C3C73}">
+													<Language>SFX</Language>
+													<AudioFile>SFX_Car_Horn_9.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="113597712"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists/>
+											<ActiveSourceList>
+												<ActiveSource Name="SFX_Car_Horn_9" ID="{46187071-2F4E-4C40-A750-AE61C06C3C73}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="SFX_Car_Horn_13" ID="{6567882D-9879-4F67-8C92-2A2CCC6B6B9E}" ShortID="798422759">
+											<PropertyList>
+												<Property Name="Pitch" Type="int32">
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{D2CC72FA-B66D-4F66-A594-AFBB2B3AB542}">
+																<PropertyList>
+																	<Property Name="Enabled" Type="bool" Value="True"/>
+																	<Property Name="Min" Type="Real64" Value="-500"/>
+																</PropertyList>
+															</Modifier>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+												<Property Name="Volume" Type="Real64">
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{6EF66720-B7AD-412F-AA34-425B56AF6753}">
+																<PropertyList>
+																	<Property Name="Min" Type="Real64" Value="-10"/>
+																</PropertyList>
+															</Modifier>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+												<Property Name="Weight" Type="Real64">
+													<ValueList>
+														<Value>2</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B3583AF1-8D28-4F4D-B419-193D520874E1}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="SFX" ID="{2B64D42B-73BA-46DD-89EA-9E96D1B8BA5F}" WorkUnitID="{DD87CA62-7EBB-4464-9491-E586973CBA5C}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SFX_Car_Horn_13" ID="{84F96D3B-97CB-4AB9-B7B9-BE2AD32B5CBC}">
+													<Language>SFX</Language>
+													<AudioFile>SFX_Car_Horn_13.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="4831832"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists/>
+											<ActiveSourceList>
+												<ActiveSource Name="SFX_Car_Horn_13" ID="{84F96D3B-97CB-4AB9-B7B9-BE2AD32B5CBC}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="SFX_Car_Horn_14" ID="{EC69052B-2B88-4CA5-B064-6A33BEC6FFA9}" ShortID="237675271">
+											<PropertyList>
+												<Property Name="Pitch" Type="int32">
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{15917A9C-0DD2-4AFC-A858-AF28AB2DD494}">
+																<PropertyList>
+																	<Property Name="Enabled" Type="bool" Value="True"/>
+																	<Property Name="Min" Type="Real64" Value="-500"/>
+																</PropertyList>
+															</Modifier>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+												<Property Name="Volume" Type="Real64">
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{D870F633-D344-480D-9784-B9C938A7E479}">
+																<PropertyList>
+																	<Property Name="Min" Type="Real64" Value="-10"/>
+																</PropertyList>
+															</Modifier>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+												<Property Name="Weight" Type="Real64">
+													<ValueList>
+														<Value>2</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B3583AF1-8D28-4F4D-B419-193D520874E1}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="SFX" ID="{2B64D42B-73BA-46DD-89EA-9E96D1B8BA5F}" WorkUnitID="{DD87CA62-7EBB-4464-9491-E586973CBA5C}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SFX_Car_Horn_14" ID="{8EADFF6C-554F-48F2-8D74-B1B62C90F280}">
+													<Language>SFX</Language>
+													<AudioFile>SFX_Car_Horn_14.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="48412455"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists/>
+											<ActiveSourceList>
+												<ActiveSource Name="SFX_Car_Horn_14" ID="{8EADFF6C-554F-48F2-8D74-B1B62C90F280}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="SFX_Car_Horn_6" ID="{4697739C-8381-4F58-A2B0-E04513B03A20}" ShortID="59465592">
+											<PropertyList>
+												<Property Name="Pitch" Type="int32">
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{B8492149-F123-4291-B470-4B8B0AA7A72D}">
+																<PropertyList>
+																	<Property Name="Enabled" Type="bool" Value="True"/>
+																	<Property Name="Min" Type="Real64" Value="-500"/>
+																</PropertyList>
+															</Modifier>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+												<Property Name="Volume" Type="Real64">
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{E2FB6A4B-CBE5-475B-8C5C-5036B6AA329F}">
+																<PropertyList>
+																	<Property Name="Min" Type="Real64" Value="-10"/>
+																</PropertyList>
+															</Modifier>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+												<Property Name="Weight" Type="Real64">
+													<ValueList>
+														<Value>2</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B3583AF1-8D28-4F4D-B419-193D520874E1}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="SFX" ID="{2B64D42B-73BA-46DD-89EA-9E96D1B8BA5F}" WorkUnitID="{DD87CA62-7EBB-4464-9491-E586973CBA5C}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SFX_Car_Horn_6" ID="{4B874FCA-74AF-4AE3-9125-E83A7326BBFD}">
+													<Language>SFX</Language>
+													<AudioFile>SFX_Car_Horn_6.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="220261236"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists/>
+											<ActiveSourceList>
+												<ActiveSource Name="SFX_Car_Horn_6" ID="{4B874FCA-74AF-4AE3-9125-E83A7326BBFD}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="SFX_Car_Horn_15" ID="{8E4C8C39-A946-413C-A4CB-A3D7DE6E2C1E}" ShortID="565972882">
+											<PropertyList>
+												<Property Name="Pitch" Type="int32">
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{26915CD5-3FBB-4B25-83A9-53D517D3183F}">
+																<PropertyList>
+																	<Property Name="Enabled" Type="bool" Value="True"/>
+																	<Property Name="Min" Type="Real64" Value="-500"/>
+																</PropertyList>
+															</Modifier>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+												<Property Name="Volume" Type="Real64">
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{C0CB1E80-F7B8-43CE-8AA8-977FF963F2BE}">
+																<PropertyList>
+																	<Property Name="Min" Type="Real64" Value="-10"/>
+																</PropertyList>
+															</Modifier>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+												<Property Name="Weight" Type="Real64">
+													<ValueList>
+														<Value>2</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B3583AF1-8D28-4F4D-B419-193D520874E1}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="SFX" ID="{2B64D42B-73BA-46DD-89EA-9E96D1B8BA5F}" WorkUnitID="{DD87CA62-7EBB-4464-9491-E586973CBA5C}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SFX_Car_Horn_15" ID="{BCD6FE06-24D8-4879-9DB5-AFCC3E02FCD4}">
+													<Language>SFX</Language>
+													<AudioFile>SFX_Car_Horn_15.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="925697344"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists/>
+											<ActiveSourceList>
+												<ActiveSource Name="SFX_Car_Horn_15" ID="{BCD6FE06-24D8-4879-9DB5-AFCC3E02FCD4}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="SFX_Car_Horn_17" ID="{2C7F7C11-6273-4ADB-9C95-8F11CD384F4A}" ShortID="137948905">
+											<PropertyList>
+												<Property Name="Pitch" Type="int32">
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{2BD49BF2-91F2-4962-82CB-540DE4A3BD6B}">
+																<PropertyList>
+																	<Property Name="Enabled" Type="bool" Value="True"/>
+																	<Property Name="Min" Type="Real64" Value="-500"/>
+																</PropertyList>
+															</Modifier>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+												<Property Name="Volume" Type="Real64">
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{40019A3A-D197-4A52-AB93-C53749F6A6E5}">
+																<PropertyList>
+																	<Property Name="Min" Type="Real64" Value="-10"/>
+																</PropertyList>
+															</Modifier>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+												<Property Name="Weight" Type="Real64">
+													<ValueList>
+														<Value>2</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B3583AF1-8D28-4F4D-B419-193D520874E1}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="SFX" ID="{2B64D42B-73BA-46DD-89EA-9E96D1B8BA5F}" WorkUnitID="{DD87CA62-7EBB-4464-9491-E586973CBA5C}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SFX_Car_Horn_17" ID="{98890682-1017-40ED-ACB7-F3027F8CD615}">
+													<Language>SFX</Language>
+													<AudioFile>SFX_Car_Horn_17.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="820914468"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists/>
+											<ActiveSourceList>
+												<ActiveSource Name="SFX_Car_Horn_17" ID="{98890682-1017-40ED-ACB7-F3027F8CD615}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="SFX_Car_Horn_3" ID="{D5A6FE8A-7F19-46CC-B5BC-13328C51D849}" ShortID="939754451">
+											<PropertyList>
+												<Property Name="Pitch" Type="int32">
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{8E46FE5B-B833-426E-B9D0-9D780E09396A}">
+																<PropertyList>
+																	<Property Name="Enabled" Type="bool" Value="True"/>
+																	<Property Name="Min" Type="Real64" Value="-500"/>
+																</PropertyList>
+															</Modifier>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>-8</Value>
+													</ValueList>
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{6229F884-1B9F-4B55-AD44-35AB6BCBE084}">
+																<PropertyList>
+																	<Property Name="Min" Type="Real64" Value="-10"/>
+																</PropertyList>
+															</Modifier>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+												<Property Name="Weight" Type="Real64">
+													<ValueList>
+														<Value>2</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B3583AF1-8D28-4F4D-B419-193D520874E1}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="SFX" ID="{2B64D42B-73BA-46DD-89EA-9E96D1B8BA5F}" WorkUnitID="{DD87CA62-7EBB-4464-9491-E586973CBA5C}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SFX_Car_Horn_3" ID="{C6ED4023-40A6-4598-A868-9DD6388E45F0}">
+													<Language>SFX</Language>
+													<AudioFile>SFX_Car_Horn_3.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="116349255"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists/>
+											<ActiveSourceList>
+												<ActiveSource Name="SFX_Car_Horn_3" ID="{C6ED4023-40A6-4598-A868-9DD6388E45F0}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="SFX_Car_Horn_18" ID="{FE6BDDED-1FB8-4C0C-A7D9-E4529BBE0050}" ShortID="337080668">
+											<PropertyList>
+												<Property Name="Pitch" Type="int32">
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{EF6C492A-8B86-4B19-9ADC-AB98BFE21BB9}">
+																<PropertyList>
+																	<Property Name="Enabled" Type="bool" Value="True"/>
+																	<Property Name="Min" Type="Real64" Value="-500"/>
+																</PropertyList>
+															</Modifier>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+												<Property Name="Volume" Type="Real64">
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{C3F20F47-9A97-4976-A750-9C45B335D53D}">
+																<PropertyList>
+																	<Property Name="Min" Type="Real64" Value="-10"/>
+																</PropertyList>
+															</Modifier>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+												<Property Name="Weight" Type="Real64">
+													<ValueList>
+														<Value>2</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B3583AF1-8D28-4F4D-B419-193D520874E1}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="SFX" ID="{2B64D42B-73BA-46DD-89EA-9E96D1B8BA5F}" WorkUnitID="{DD87CA62-7EBB-4464-9491-E586973CBA5C}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SFX_Car_Horn_18" ID="{6D134B6D-9477-4209-8627-2651414AD115}">
+													<Language>SFX</Language>
+													<AudioFile>SFX_Car_Horn_18.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="786354683"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists/>
+											<ActiveSourceList>
+												<ActiveSource Name="SFX_Car_Horn_18" ID="{6D134B6D-9477-4209-8627-2651414AD115}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="SFX_Car_Horn_21" ID="{B74DAA26-06E3-4FFE-98CA-204864FEEF65}" ShortID="406642449">
+											<PropertyList>
+												<Property Name="Pitch" Type="int32">
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{57956B95-9B03-43D2-9D22-B86C4FD79856}">
+																<PropertyList>
+																	<Property Name="Enabled" Type="bool" Value="True"/>
+																	<Property Name="Min" Type="Real64" Value="-500"/>
+																</PropertyList>
+															</Modifier>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+												<Property Name="Volume" Type="Real64">
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{E89F483D-1AB2-4495-970D-90D97D9D43E0}">
+																<PropertyList>
+																	<Property Name="Min" Type="Real64" Value="-10"/>
+																</PropertyList>
+															</Modifier>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+												<Property Name="Weight" Type="Real64">
+													<ValueList>
+														<Value>2</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B3583AF1-8D28-4F4D-B419-193D520874E1}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="SFX" ID="{2B64D42B-73BA-46DD-89EA-9E96D1B8BA5F}" WorkUnitID="{DD87CA62-7EBB-4464-9491-E586973CBA5C}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SFX_Car_Horn_21" ID="{5CD3D4E5-8D7C-4EF4-85D4-FB21DA5200B4}">
+													<Language>SFX</Language>
+													<AudioFile>SFX_Car_Horn_21.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="416945339"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists/>
+											<ActiveSourceList>
+												<ActiveSource Name="SFX_Car_Horn_21" ID="{5CD3D4E5-8D7C-4EF4-85D4-FB21DA5200B4}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="SFX_Car_Horn_24" ID="{3918CE60-2C45-44E4-8338-35F19BCA4EAE}" ShortID="711188669">
+											<PropertyList>
+												<Property Name="Pitch" Type="int32">
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{DB09E0F6-FF7F-48CE-86D7-724942D3BC50}">
+																<PropertyList>
+																	<Property Name="Enabled" Type="bool" Value="True"/>
+																	<Property Name="Min" Type="Real64" Value="-500"/>
+																</PropertyList>
+															</Modifier>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+												<Property Name="Volume" Type="Real64">
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{6A6BD799-1429-4D9B-8EE3-4339EF018358}">
+																<PropertyList>
+																	<Property Name="Min" Type="Real64" Value="-10"/>
+																</PropertyList>
+															</Modifier>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+												<Property Name="Weight" Type="Real64">
+													<ValueList>
+														<Value>2</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B3583AF1-8D28-4F4D-B419-193D520874E1}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="SFX" ID="{2B64D42B-73BA-46DD-89EA-9E96D1B8BA5F}" WorkUnitID="{DD87CA62-7EBB-4464-9491-E586973CBA5C}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SFX_Car_Horn_24" ID="{9A54B09F-DF3F-450A-886B-FD0348A9578D}">
+													<Language>SFX</Language>
+													<AudioFile>SFX_Car_Horn_24.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="662207006"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists/>
+											<ActiveSourceList>
+												<ActiveSource Name="SFX_Car_Horn_24" ID="{9A54B09F-DF3F-450A-886B-FD0348A9578D}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="SFX_Car_Horn_20" ID="{2C02C9EE-88AC-4A3F-ABA2-478BCE9B7B54}" ShortID="742216138">
+											<PropertyList>
+												<Property Name="Pitch" Type="int32">
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{90AB3AAA-6D4B-43F7-858C-ED21A90913AA}">
+																<PropertyList>
+																	<Property Name="Enabled" Type="bool" Value="True"/>
+																	<Property Name="Min" Type="Real64" Value="-500"/>
+																</PropertyList>
+															</Modifier>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+												<Property Name="Volume" Type="Real64">
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{9A432D9A-2679-4E89-8CB3-073BA1C10142}">
+																<PropertyList>
+																	<Property Name="Min" Type="Real64" Value="-10"/>
+																</PropertyList>
+															</Modifier>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+												<Property Name="Weight" Type="Real64">
+													<ValueList>
+														<Value>2</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B3583AF1-8D28-4F4D-B419-193D520874E1}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="SFX" ID="{2B64D42B-73BA-46DD-89EA-9E96D1B8BA5F}" WorkUnitID="{DD87CA62-7EBB-4464-9491-E586973CBA5C}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SFX_Car_Horn_20" ID="{AD113EE5-5478-482B-AC5C-F7E3176D6864}">
+													<Language>SFX</Language>
+													<AudioFile>SFX_Car_Horn_20.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="740195818"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists/>
+											<ActiveSourceList>
+												<ActiveSource Name="SFX_Car_Horn_20" ID="{AD113EE5-5478-482B-AC5C-F7E3176D6864}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="SFX_Car_Horn_22" ID="{8C52D6C4-6280-48C1-845F-E8B4D6E0086C}" ShortID="912277894">
+											<PropertyList>
+												<Property Name="Pitch" Type="int32">
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{8845E156-62DC-414E-A4E3-FF964088617E}">
+																<PropertyList>
+																	<Property Name="Enabled" Type="bool" Value="True"/>
+																	<Property Name="Min" Type="Real64" Value="-500"/>
+																</PropertyList>
+															</Modifier>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+												<Property Name="Volume" Type="Real64">
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{97BDA3D3-FBFB-4EFE-9F9B-72DAD67162C8}">
+																<PropertyList>
+																	<Property Name="Min" Type="Real64" Value="-10"/>
+																</PropertyList>
+															</Modifier>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+												<Property Name="Weight" Type="Real64">
+													<ValueList>
+														<Value>2</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B3583AF1-8D28-4F4D-B419-193D520874E1}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="SFX" ID="{2B64D42B-73BA-46DD-89EA-9E96D1B8BA5F}" WorkUnitID="{DD87CA62-7EBB-4464-9491-E586973CBA5C}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SFX_Car_Horn_22" ID="{4EF9B1E2-E779-4D33-8457-D91E5FBD023E}">
+													<Language>SFX</Language>
+													<AudioFile>SFX_Car_Horn_22.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="469872040"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists/>
+											<ActiveSourceList>
+												<ActiveSource Name="SFX_Car_Horn_22" ID="{4EF9B1E2-E779-4D33-8457-D91E5FBD023E}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="SFX_Car_Horn_12" ID="{8F31C7C8-EAB1-4F62-835C-BD07AE1EF359}" ShortID="1032108478">
+											<PropertyList>
+												<Property Name="Pitch" Type="int32">
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{619EF6E6-4E6E-403B-800D-84F0BADE19AF}">
+																<PropertyList>
+																	<Property Name="Enabled" Type="bool" Value="True"/>
+																	<Property Name="Min" Type="Real64" Value="-500"/>
+																</PropertyList>
+															</Modifier>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+												<Property Name="Volume" Type="Real64">
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{BFB483E1-6EF9-425D-A611-31ABA9C24768}">
+																<PropertyList>
+																	<Property Name="Min" Type="Real64" Value="-10"/>
+																</PropertyList>
+															</Modifier>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+												<Property Name="Weight" Type="Real64">
+													<ValueList>
+														<Value>2</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B3583AF1-8D28-4F4D-B419-193D520874E1}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="SFX" ID="{2B64D42B-73BA-46DD-89EA-9E96D1B8BA5F}" WorkUnitID="{DD87CA62-7EBB-4464-9491-E586973CBA5C}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SFX_Car_Horn_12" ID="{9E3CCB83-CDF3-42F3-B97B-EFF417644604}">
+													<Language>SFX</Language>
+													<AudioFile>SFX_Car_Horn_12.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="455434578"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists/>
+											<ActiveSourceList>
+												<ActiveSource Name="SFX_Car_Horn_12" ID="{9E3CCB83-CDF3-42F3-B97B-EFF417644604}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+									<ObjectLists/>
+								</RandomSequenceContainer>
+							</ChildrenList>
+							<ObjectLists/>
+						</BlendContainer>
+						<Sound Name="VO_Death_1" ID="{02C3D5DA-F16B-4484-9ABB-B94CBAA164F0}" ShortID="143839214">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B3583AF1-8D28-4F4D-B419-193D520874E1}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{DD87CA62-7EBB-4464-9491-E586973CBA5C}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="VO_Death_1" ID="{8B29D074-E6FE-4781-9A71-12B016AE7229}">
+									<Language>SFX</Language>
+									<AudioFile>VO_Death_1.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="420732443"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="VO_Death_1" ID="{8B29D074-E6FE-4781-9A71-12B016AE7229}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+					<ObjectLists/>
+				</ActorMixer>
+			</ChildrenList>
+		</WorkUnit>
+	</AudioObjects>
+</WwiseDocument>

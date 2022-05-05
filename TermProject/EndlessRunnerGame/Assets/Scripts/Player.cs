@@ -30,23 +30,19 @@ public class Player : MonoBehaviour
         rigidBodyComponent = GetComponent<Rigidbody>();
         Physics.gravity = new Vector3(0, -40.0F, 0);
         
-		DontDestroyOnLoad(gameObject);
+		//DontDestroyOnLoad(gameObject);
     }
     
     private void Update()
     {
-
         rigidBodyComponent.velocity = (new Vector3(0, rigidBodyComponent.velocity.y, 0)) + moveDirection * walkSpeed;
-
-        if (Physics.OverlapSphere(rigidBodyComponent.position - new Vector3(0, GetComponent<CapsuleCollider>().bounds.size.y/2, 0), 0.1f, LayerMask.GetMask("Default")).Length == 0)
-        {
-            return;
-        }
-
+        // if (Physics.OverlapSphere(rigidBodyComponent.position - new Vector3(0, GetComponent<CapsuleCollider>().bounds.size.y/2, 0), 0.1f, LayerMask.GetMask("Default")).Length == 0)
+        // {
+        //     return;
+        // }
         if (jumping)
         {
             rigidBodyComponent.velocity = new Vector3(rigidBodyComponent.velocity.x, jumpPower, rigidBodyComponent.velocity.z);
         }
-
     }
 }
