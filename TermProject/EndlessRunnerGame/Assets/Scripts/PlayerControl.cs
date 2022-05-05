@@ -16,6 +16,7 @@ public class PlayerControl : MonoBehaviour
     private double lastMoveRequest = 0;
     private double MOVE_REQUEST_FREQUENCY = 0.5;
     private bool movementChanged = false;
+    private int coinCount = 0;
     public float respawnHeight;
 
     private int requestNumber = 0;
@@ -76,6 +77,7 @@ public class PlayerControl : MonoBehaviour
 
         if (node.gameObject.tag == "Coin")
         {
+            coinCount += 1;
             Destroy(node.gameObject);
         }
     }

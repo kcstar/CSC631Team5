@@ -34,10 +34,10 @@ public class LevelGenerator : MonoBehaviour
     {
         int selectedLevel = Random.Range(1, levels.Length);
         //Transform levelPartTransform = Instantiate(levels[selectedLevel], spawnPosition, Quaternion.identity);
-        //while (selectedLevel == prevLevel)
-        //{
-        //    selectedLevel = Random.Range(0, levels.Length);
-        //}
+        while (selectedLevel == prevLevel)
+        {
+            selectedLevel = Random.Range(1, levels.Length);
+        }
         Transform levelPartTransform = Instantiate(levels[selectedLevel], spawnPosition + (new Vector3(2.4728f, 0, 65.85778f)), Quaternion.identity);
         prevLevel = selectedLevel;
         Debug.Log($"Spawning {levels[selectedLevel].name}...");
