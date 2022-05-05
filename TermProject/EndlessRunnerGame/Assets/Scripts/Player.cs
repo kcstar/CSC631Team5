@@ -16,6 +16,8 @@ public class Player : MonoBehaviour
         set { rigidBodyComponent.position = value; }
     }
     public bool jumping;
+
+
     private Vector3 moveDirection = new Vector3();
     public Vector3 MoveDirection {
         get { return moveDirection; }
@@ -35,18 +37,23 @@ public class Player : MonoBehaviour
     
     private void Update()
     {
-
+        
         rigidBodyComponent.velocity = (new Vector3(0, rigidBodyComponent.velocity.y, 0)) + moveDirection * walkSpeed;
         
+
         if (Physics.OverlapSphere(rigidBodyComponent.position - new Vector3(0, GetComponent<MeshCollider>().bounds.size.y/2, 0), 0.1f, LayerMask.GetMask("Default")).Length == 0)
         {
             return;
         }
         
+
         if (jumping)
         {
             rigidBodyComponent.velocity = new Vector3(rigidBodyComponent.velocity.x, jumpPower, rigidBodyComponent.velocity.z);
         }
 
     }
+
+
+    
 }
