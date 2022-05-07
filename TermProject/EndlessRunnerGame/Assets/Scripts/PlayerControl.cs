@@ -20,7 +20,7 @@ public class PlayerControl : MonoBehaviour
     private int coinCount = 0;
     private float distance = 0f;
     private bool coinCollected = false;
-    public float respawnHeight = 8f;
+    public float respawnHeight;
 
     private int requestNumber = 0;
 
