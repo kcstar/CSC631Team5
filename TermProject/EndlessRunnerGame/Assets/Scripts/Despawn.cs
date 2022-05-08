@@ -16,11 +16,11 @@ public class Despawn : MonoBehaviour
 
     void Update()
     {
-        /*
-        if ((Vector3.Distance(GameObject.Find("Player").transform.position, endPosition) > 15f) && (GameObject.Find("Player").transform.position.x > endPosition.x))
+        
+        if ((Vector3.Distance(GameObject.Find("Player").transform.position, endPosition) > 100f) && (GameObject.Find("Player").transform.position.x > endPosition.x))
         {
             Destroy(this.gameObject);
         }
-        */
+        
     }
 }

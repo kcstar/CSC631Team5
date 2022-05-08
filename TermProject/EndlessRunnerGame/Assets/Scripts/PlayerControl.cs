@@ -7,6 +7,7 @@ using UnityEngine;
 
 public class PlayerControl : MonoBehaviour
 {
+    [SerializeField] private Transform startPosition;
     private Vector3 spawnPos;
     private float horizontalInput;
     private int superJumpsRemaining;
@@ -16,6 +17,9 @@ public class PlayerControl : MonoBehaviour
     private double lastMoveRequest = 0;
     private double MOVE_REQUEST_FREQUENCY = 0.5;
     private bool movementChanged = false;
+    private int coinCount = 0;
+    private float distance = 0f;
+    private bool coinCollected = false;
     public float respawnHeight;
     private int requestNumber = 0;
 
@@ -31,6 +35,9 @@ public class PlayerControl : MonoBehaviour
     void FixedUpdate()
     {
         if (gameObject.transform.position.y < respawnHeight) {
+            Debug.Log($"Distance is {distance}");
+            Debug.Log($"Died with {coinCount} coins");
+            coinCount = 0;
             humanoid.position = spawnPos;
             humanoid.velocity = new Vector3();
         }
@@ -59,6 +66,7 @@ public class PlayerControl : MonoBehaviour
             movementChanged = false;
             requestNumber++;
         }
+        distance = Mathf.Abs(startPosition.position.x - GameObject.Find("Player").transform.position.x);
     }
 
     private void onTriggerEnter(Collider other)
@@ -73,9 +81,23 @@ public class PlayerControl : MonoBehaviour
     public void OnCollisionEnter(Collision node)
     {
 
-        if (node.gameObject.tag == "Coin")
+        if ((node.gameObject.tag == "Coin") && (coinCollected == false))
         {
+            Debug.Log("COLLIDED WITH COIN");
+            AkSoundEngine.PostEvent("Play_SFX_Coin", this.gameObject);
+            coinCollected = true;
+            coinCount += 1;
             Destroy(node.gameObject);
+            coinCollected = false;
         }
     }
+    /*
+    public void OnCollisionExit(Collision node)
+    {
+        if ((node.gameObject.tag == "Coin") && (coinCollected == true))
+        {
+            coinCollected = false;
+        }
+    }
+    */
 }
