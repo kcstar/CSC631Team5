@@ -21,7 +21,6 @@ public class PlayerControl : MonoBehaviour
     private float distance = 0f;
     private bool coinCollected = false;
     public float respawnHeight;
-
     private int requestNumber = 0;
 
     void Start()
@@ -45,24 +44,24 @@ public class PlayerControl : MonoBehaviour
 
         float horizontal = Input.GetAxisRaw("Horizontal");
         float vertical = Input.GetAxisRaw("Vertical");
-        float walkSpeed = (Input.GetKey(KeyCode.LeftShift)) ? 10.0f : 4.0f;
-        float jumpPower = (Input.GetKey(KeyCode.LeftShift)) ? 18 : 13;
+        //float walkSpeed = (Input.GetKey(KeyCode.LeftShift)) ? 10.0f : 4.0f;
+        //float jumpPower = (Input.GetKey(KeyCode.LeftShift)) ? 18 : 13;
         Vector3 moveDirection = new Vector3(horizontal, 0, vertical);
         bool jumping = Input.GetKey(KeyCode.Space);
 
-        if (walkSpeed != humanoid.walkSpeed || jumpPower != humanoid.jumpPower || moveDirection != humanoid.MoveDirection || jumping != humanoid.jumping) {
+        if (horizontal != humanoid.inputX || jumping != humanoid.jumping) {
             movementChanged = true;
         }
 
-        humanoid.walkSpeed = walkSpeed;
-        humanoid.jumpPower = jumpPower;
-        humanoid.MoveDirection = moveDirection;
+        //humanoid.walkSpeed = walkSpeed;
+        //humanoid.jumpPower = jumpPower;
+        humanoid.inputX = horizontal;
         humanoid.jumping = jumping;
 
         double currentTime = Time.realtimeSinceStartup;
         if (currentTime - lastMoveRequest > MOVE_REQUEST_FREQUENCY || movementChanged) {
             Debug.Log("Sent move " + requestNumber);
-		    networkManager.SendMoveRequest(humanoid.position.x, humanoid.position.y, humanoid.position.z, humanoid.velocity.x, humanoid.velocity.y, humanoid.velocity.z, humanoid.walkSpeed, horizontal, vertical, humanoid.jumping);
+		    networkManager.SendMoveRequest(humanoid.position.x, humanoid.position.y, humanoid.velocity.x, humanoid.velocity.y, horizontal, humanoid.jumping);
             lastMoveRequest = currentTime;
             movementChanged = false;
             requestNumber++;
