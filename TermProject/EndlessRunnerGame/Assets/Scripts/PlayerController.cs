@@ -5,10 +5,16 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     public Animator anim;
-    // Update is called once per frame
-    void Update()
-    {
-        anim.SetFloat("Horizontal", Input.GetAxis("Horizontal"));
-        anim.SetFloat("Vertical", Input.GetAxis("Vertical"));
+
+    public float maxSpeed;
+    private float speed;
+
+    public void SetSpeed(float speed) {
+        this.speed = speed;
+        anim.SetFloat("Horizontal", speed / maxSpeed);
+    }
+
+    public float GetSpeed() {
+        return speed;
     }
 }

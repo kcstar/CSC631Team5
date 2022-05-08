@@ -7,13 +7,9 @@ public class ResponseMoveEventArgs : ExtendedEventArgs
 	public int user_id { get; set; } // The user_id of whom who sent the request
 	public float posX { get; set; }
 	public float posY { get; set; }
-	public float posZ { get; set; }
 	public float velX { get; set; }
 	public float velY { get; set; }
-	public float velZ { get; set; }
-	public float walkSpeed { get; set; }
-	public float walkX { get; set; }
-	public float walkZ { get; set; }
+	public float inputX { get; set; }
 	public bool jumping { get; set; }
 
 	public ResponseMoveEventArgs()
@@ -27,13 +23,9 @@ public class ResponseMove : NetworkResponse
 	private int user_id;
 	private float posX;
 	private float posY;
-	private float posZ;
 	private float velX;
 	private float velY;
-	private float velZ;
-	private float walkSpeed;
-	private float walkX;
-	private float walkZ;
+	private float inputX;
 	private bool jumping;
 
 	public ResponseMove()
@@ -45,13 +37,9 @@ public class ResponseMove : NetworkResponse
 		user_id = DataReader.ReadInt(dataStream);
 		posX = DataReader.ReadFloat(dataStream);
 		posY = DataReader.ReadFloat(dataStream);
-		posZ = DataReader.ReadFloat(dataStream);
 		velX = DataReader.ReadFloat(dataStream);
 		velY = DataReader.ReadFloat(dataStream);
-		velZ = DataReader.ReadFloat(dataStream);
-		walkSpeed = DataReader.ReadFloat(dataStream);
-		walkX = DataReader.ReadFloat(dataStream);
-		walkZ = DataReader.ReadFloat(dataStream);
+		inputX = DataReader.ReadFloat(dataStream);
 		jumping = DataReader.ReadBool(dataStream);
 	}
 
@@ -62,13 +50,9 @@ public class ResponseMove : NetworkResponse
 			user_id = user_id,
 			posX = posX,
 			posY = posY,
-			posZ = posZ,
 			velX = velX,
 			velY = velY,
-			velZ = velZ,
-			walkSpeed = walkSpeed,
-			walkX = walkX,
-			walkZ = walkZ,
+			inputX = inputX,
 			jumping = jumping
 		};
 
