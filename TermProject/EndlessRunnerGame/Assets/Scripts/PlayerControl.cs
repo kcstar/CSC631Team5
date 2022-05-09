@@ -17,6 +17,9 @@ public class PlayerControl : MonoBehaviour
     private double MOVE_REQUEST_FREQUENCY = 0.5;
     private bool movementChanged = false;
     public float respawnHeight;
+    public int health = 3;
+
+
 
     private int requestNumber = 0;
 
@@ -62,8 +65,12 @@ public class PlayerControl : MonoBehaviour
         }
     }
 
+
+
     private void onTriggerEnter(Collider other)
     {
+        
+
         if (other.gameObject.layer == 9)
         {
             Destroy(other.gameObject);
@@ -73,7 +80,7 @@ public class PlayerControl : MonoBehaviour
 
     public void OnCollisionEnter(Collision node)
     {
-
+        
         if (node.gameObject.tag == "Coin")
         {
             Destroy(node.gameObject);
