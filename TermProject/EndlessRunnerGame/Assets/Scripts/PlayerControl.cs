@@ -8,7 +8,7 @@ using UnityEngine;
 public class PlayerControl : MonoBehaviour
 {
     [SerializeField] private Transform startPosition;
-    private Vector3 spawnPos;
+    public GameObject spawn;
     private float horizontalInput;
     private int superJumpsRemaining;
 	private NetworkManager networkManager;
@@ -25,7 +25,6 @@ public class PlayerControl : MonoBehaviour
 
     void Start()
     {
-        spawnPos = gameObject.transform.position;
 		networkManager = GameObject.Find("Network Manager").GetComponent<NetworkManager>();
         humanoid = gameObject.GetComponent<Player>();
 		//DontDestroyOnLoad(gameObject);
@@ -38,7 +37,7 @@ public class PlayerControl : MonoBehaviour
             Debug.Log($"Distance is {distance}");
             Debug.Log($"Died with {coinCount} coins");
             coinCount = 0;
-            humanoid.position = spawnPos;
+            humanoid.position = spawn.transform.position + new Vector3(0, 2 - spawn.transform.localScale.y/2, 0);
             humanoid.velocity = new Vector3();
         }
 
@@ -90,6 +89,15 @@ public class PlayerControl : MonoBehaviour
             Destroy(node.gameObject);
             coinCollected = false;
         }
+
+        /*
+        if ((node.gameObject.tag == "Spawn"))
+        {
+            Debug.Log("COLLIDED WITH SPAWN");
+            spawn = node.gameObject;
+            node.gameObject.GetComponent<BoxCollider>().enabled = false;
+        }
+        */
     }
     /*
     public void OnCollisionExit(Collision node)
