@@ -180,6 +180,53 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Play_Falling_Whistle" ID="{B2FAA644-7AE1-4F26-A74D-920D2969FD8F}">
+					<ChildrenList>
+						<Action Name="" ID="{4452BB8E-6247-4C0D-BB57-E3F12B920BBD}" ShortID="604726349">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Falling_Whistle" ID="{717D8B1C-EE08-4215-98DC-0C4F3F0077F6}" WorkUnitID="{140E8692-0606-4EF2-AAAC-D31993B7C052}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Helicopter" ID="{947D73AB-6913-42F0-AFA4-0075B4673AAC}">
+					<ChildrenList>
+						<Action Name="" ID="{712A4BEA-E499-47F1-AB99-2EC194CC3FA5}" ShortID="872264158">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Helicopter" ID="{1A984747-97E0-4105-8739-97AC0A23CA5F}" WorkUnitID="{140E8692-0606-4EF2-AAAC-D31993B7C052}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Stop_Helicopter" ID="{A64D4C49-4311-493C-BC25-8ACA514024E4}">
+					<ChildrenList>
+						<Action Name="" ID="{49D6CBC4-692F-43AF-9B37-F9BB526BA0EA}" ShortID="115779612">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Helicopter" ID="{1A984747-97E0-4105-8739-97AC0A23CA5F}" WorkUnitID="{140E8692-0606-4EF2-AAAC-D31993B7C052}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_SFX_Game_Over_Stinger" ID="{0A1D1F78-3A45-40DB-91E9-8B891EDD752D}">
+					<ChildrenList>
+						<Action Name="" ID="{6489A054-6529-4E76-8089-FAB939184A4A}" ShortID="813618841">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SFX_Game_Over_Stinger" ID="{1D996975-46C9-4CB9-8CBA-3D50BB0D430A}" WorkUnitID="{140E8692-0606-4EF2-AAAC-D31993B7C052}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

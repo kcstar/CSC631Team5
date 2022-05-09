@@ -16,7 +16,7 @@
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 		</SoundBank>
-		<SoundBank Id="4009941598" Language="SFX" Hash="231806768">
+		<SoundBank Id="4009941598" Language="SFX" Hash="3516290298">
 			<ObjectPath>\SoundBanks\Default Work Unit\Official</ObjectPath>
 			<ShortName>Official</ShortName>
 			<Path>Official.bnk</Path>
@@ -137,6 +137,14 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
+				<Event Id="1379027492" Name="Play_Falling_Whistle" ObjectPath="\Events\Default Work Unit\Play_Falling_Whistle">
+					<IncludedMemoryFiles>
+						<File Id="642446455" Language="SFX">
+							<ShortName>cartoon_drop.wav</ShortName>
+							<Path>SFX\cartoon_drop_3F75BDB9.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
 				<Event Id="3854155799" Name="Play_Footsteps" ObjectPath="\Events\Default Work Unit\Play_Footsteps">
 					<IncludedMemoryFiles>
 						<File Id="270338045" Language="SFX">
@@ -177,11 +185,19 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
+				<Event Id="774814993" Name="Play_Helicopter" ObjectPath="\Events\Default Work Unit\Play_Helicopter">
+					<IncludedMemoryFiles>
+						<File Id="871685059" Language="SFX">
+							<ShortName>172667__underlineddesigns__military-rotor-loop.wav</ShortName>
+							<Path>SFX\172667__underlineddesigns__military-rotor-loop_9EDFC787.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
 				<Event Id="3306210749" Name="Play_Main_Menu" ObjectPath="\Events\Default Work Unit\Play_Main_Menu">
 					<IncludedMemoryFiles>
-						<File Id="532191630" Language="SFX">
-							<ShortName>Song For Rooftop Runner 02.wav</ShortName>
-							<Path>SFX\Song For Rooftop Runner 02_9EDFC787.wem</Path>
+						<File Id="1054376750" Language="SFX">
+							<ShortName>Song For Rooftop Runner.wav</ShortName>
+							<Path>SFX\Song For Rooftop Runner_9EDFC787.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -206,6 +222,14 @@
 						<File Id="816575531" Language="SFX">
 							<ShortName>SFX_Explosion.wav</ShortName>
 							<Path>SFX\SFX_Explosion_3F75BDB9.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="2797469750" Name="Play_SFX_Game_Over_Stinger" ObjectPath="\Events\Default Work Unit\Play_SFX_Game_Over_Stinger">
+					<IncludedMemoryFiles>
+						<File Id="747012289" Language="SFX">
+							<ShortName>SFX_Game_Over_Stinger.wav</ShortName>
+							<Path>SFX\SFX_Game_Over_Stinger_3F75BDB9.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -251,6 +275,7 @@
 				</Event>
 				<Event Id="2839405212" Name="Stop_Ambiance" ObjectPath="\Events\Default Work Unit\Stop_Ambiance"/>
 				<Event Id="2245059084" Name="Stop_Gameplay" ObjectPath="\Events\Default Work Unit\Stop_Gameplay"/>
+				<Event Id="3999941067" Name="Stop_Helicopter" ObjectPath="\Events\Default Work Unit\Stop_Helicopter"/>
 				<Event Id="774860123" Name="Stop_Main_Menu" ObjectPath="\Events\Default Work Unit\Stop_Main_Menu"/>
 			</IncludedEvents>
 		</SoundBank>
