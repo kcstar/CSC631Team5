@@ -42,20 +42,21 @@ public class PlayerControl : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        if (gameObject.transform.position.y < respawnHeight) {
+        if (health <= 0) {
+            noHealth = true;
             Debug.Log($"Distance is {distance}");
             Debug.Log($"Died with {coinCount} coins");
             coinCount = 0;
+            SceneManager.LoadScene("GameOver");
+        }
+
+        if (gameObject.transform.position.y < respawnHeight) {
+            // AkSoundEngine.PostEvent("Play_Falling_Whistle", this.gameObject);
+            // AkSoundEngine.PostEvent("Play_SFX_Dumpster", this.gameObject);
             humanoid.position = spawnPos;
             humanoid.velocity = new Vector3();
-            SceneManager.LoadScene("GameOver");
+            health--;
         }
-
-        if (noHealth)
-        {
-            SceneManager.LoadScene("GameOver");
-        }
-
 
         float horizontal = Input.GetAxisRaw("Horizontal");
         float vertical = Input.GetAxisRaw("Vertical");
@@ -84,6 +85,7 @@ public class PlayerControl : MonoBehaviour
         distance = Mathf.Abs(startPosition.position.x - GameObject.Find("Player").transform.position.x);
         gameplayUI.updateCoin(coinCount);
         gameplayUI.updateDistance(distance);
+        gameplayUI.updateHealth(health);
     }
 
 
@@ -104,10 +106,6 @@ public class PlayerControl : MonoBehaviour
             {
             Debug.Log("COLLIDED WITH GRENADE");
             health -= 1;
-            if (health <= 0)
-            {
-                noHealth = true;
-            }
             print(health);
         }
         if ((node.gameObject.tag == "Coin") && (coinCollected == false))
