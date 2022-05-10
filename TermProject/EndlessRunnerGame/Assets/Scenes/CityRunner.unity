@@ -663,7 +663,6 @@ MonoBehaviour:
   startPosition: {fileID: 157449713}
   UI: {fileID: 373048962}
   respawnHeight: 0.1
-  health: 3
 --- !u!114 &315342194
 MonoBehaviour:
   m_ObjectHideFlags: 0

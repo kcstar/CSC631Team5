@@ -26,7 +26,7 @@ public class PlayerControl : MonoBehaviour
     public float respawnHeight;
     private int requestNumber = 0;
 
-    public int health = 3;
+    private int health = 3;
     private bool noHealth = false;
 
     void Start()
@@ -90,17 +90,7 @@ public class PlayerControl : MonoBehaviour
 
     private void onTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Grenade"))
-        {
-
-            health -= 1;
-            if (health <= 0)
-            {
-                noHealth = true;
-            }
-            print(health);
-        }
-
+       
         if (other.gameObject.layer == 9)
         {
             Destroy(other.gameObject);
@@ -110,7 +100,16 @@ public class PlayerControl : MonoBehaviour
 
     public void OnCollisionEnter(Collision node)
     {
-        
+        if(node.gameObject.tag == "Grenade")
+            {
+            Debug.Log("COLLIDED WITH GRENADE");
+            health -= 1;
+            if (health <= 0)
+            {
+                noHealth = true;
+            }
+            print(health);
+        }
         if ((node.gameObject.tag == "Coin") && (coinCollected == false))
         {
             Debug.Log("COLLIDED WITH COIN");
