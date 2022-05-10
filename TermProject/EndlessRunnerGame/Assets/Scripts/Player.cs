@@ -26,6 +26,8 @@ public class Player : MonoBehaviour
     private Boolean grounded = false;
     private float stickiness = 10f;
 
+    
+
     private PlayerController stickmanAnimator;
 
     void Start()
@@ -39,6 +41,8 @@ public class Player : MonoBehaviour
     
     private void FixedUpdate()
     {
+
+        
         stickmanAnimator.SetSpeed(ApplyStickiness(stickmanAnimator.GetSpeed(), rigidBodyComponent.velocity.x));
         //rigidBodyComponent.velocity = ApplyStickiness(rigidBodyComponent.velocity, new Vector3((1.0f + playerInfluence * inputX) * walkSpeed, rigidBodyComponent.velocity.y, 0));
         rigidBodyComponent.velocity = new Vector3((1.0f + playerInfluence * inputX) * walkSpeed, rigidBodyComponent.velocity.y, 0);
@@ -81,4 +85,5 @@ public class Player : MonoBehaviour
         float adjustedStickiness = Mathf.Min(stickiness * Time.deltaTime, 1);
         return from * (1 - adjustedStickiness) + to * adjustedStickiness;
     }
+
 }
