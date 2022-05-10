@@ -2,12 +2,15 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 
 
 public class PlayerControl : MonoBehaviour
 {
     [SerializeField] private Transform startPosition;
+    [SerializeField] private Canvas UI;
+    private GameplayUI gameplayUI;
     private Vector3 spawnPos;
     private float horizontalInput;
     private int superJumpsRemaining;
@@ -28,6 +31,7 @@ public class PlayerControl : MonoBehaviour
         spawnPos = gameObject.transform.position;
 		networkManager = GameObject.Find("Network Manager").GetComponent<NetworkManager>();
         humanoid = gameObject.GetComponent<Player>();
+        gameplayUI = UI.GetComponent<GameplayUI>();
 		//DontDestroyOnLoad(gameObject);
     }
 
@@ -40,6 +44,7 @@ public class PlayerControl : MonoBehaviour
             coinCount = 0;
             humanoid.position = spawnPos;
             humanoid.velocity = new Vector3();
+            SceneManager.LoadScene("GameOver");
         }
 
         float horizontal = Input.GetAxisRaw("Horizontal");
@@ -67,6 +72,8 @@ public class PlayerControl : MonoBehaviour
             requestNumber++;
         }
         distance = Mathf.Abs(startPosition.position.x - GameObject.Find("Player").transform.position.x);
+        gameplayUI.updateCoin(coinCount);
+        gameplayUI.updateDistance(distance);
     }
 
     private void onTriggerEnter(Collider other)
