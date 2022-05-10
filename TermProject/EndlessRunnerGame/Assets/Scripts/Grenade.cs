@@ -50,15 +50,16 @@ public class Grenade : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-
+        
         if (other.name == "对象005" || other.name == "对象006" || other.name == "对象007")
         {
-
+            
             isTrigger = true;
         }
     }
      private void OnCollisionEnter(Collision collision)
     {
+        
         isTrigger = true;
     }
 
