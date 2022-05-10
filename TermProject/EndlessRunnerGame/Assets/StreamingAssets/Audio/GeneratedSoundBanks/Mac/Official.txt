@@ -1,14 +1,11 @@
 Event	ID	Name			Wwise Object Path	Notes
 	751878650	Play_SFX_Menu_Confirm			\Default Work Unit\Play_SFX_Menu_Confirm	
-	774814993	Play_Helicopter			\Default Work Unit\Play_Helicopter	
 	774860123	Stop_Main_Menu			\Default Work Unit\Stop_Main_Menu	
 	776917868	Play_SFX_Dumpster			\Default Work Unit\Play_SFX_Dumpster	
-	1379027492	Play_Falling_Whistle			\Default Work Unit\Play_Falling_Whistle	
 	1721105142	Play_SFX_Throw			\Default Work Unit\Play_SFX_Throw	
 	2189089152	Play_VO_Death_1			\Default Work Unit\Play_VO_Death_1	
 	2245059084	Stop_Gameplay			\Default Work Unit\Stop_Gameplay	
 	2514707895	Play_SFX_Explosion			\Default Work Unit\Play_SFX_Explosion	
-	2797469750	Play_SFX_Game_Over_Stinger			\Default Work Unit\Play_SFX_Game_Over_Stinger	
 	2839405212	Stop_Ambiance			\Default Work Unit\Stop_Ambiance	
 	3174479978	Play_Ambiance			\Default Work Unit\Play_Ambiance	
 	3306210749	Play_Main_Menu			\Default Work Unit\Play_Main_Menu	
@@ -17,7 +14,6 @@ Event	ID	Name			Wwise Object Path	Notes
 	3759090466	Play_SFX_Menu_Select			\Default Work Unit\Play_SFX_Menu_Select	
 	3833599577	Play_SFX_Coin			\Default Work Unit\Play_SFX_Coin	
 	3854155799	Play_Footsteps			\Default Work Unit\Play_Footsteps	
-	3999941067	Stop_Helicopter			\Default Work Unit\Stop_Helicopter	
 
 Effect plug-ins	ID	Name	Type				Notes
 	48620415	Have_U_Ever_Been_Outside	Wwise RoomVerb			
@@ -44,22 +40,20 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	455434578	SFX_Car_Horn_12	C:\Users\Kevin\Documents\WwiseProjects\CityRunner\.cache\Mac\SFX\SFX_Car_Horn_12_3F75BDB9.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Ambiance\Car_Horns\SFX_Car_Horn_12		18711
 	469872040	SFX_Car_Horn_22	C:\Users\Kevin\Documents\WwiseProjects\CityRunner\.cache\Mac\SFX\SFX_Car_Horn_22_3F75BDB9.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Ambiance\Car_Horns\SFX_Car_Horn_22		16000
 	513906901	SFX_Menu_Confirm	C:\Users\Kevin\Documents\WwiseProjects\CityRunner\.cache\Mac\SFX\SFX_Menu_Confirm_3F75BDB9.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Menu_Confirm		2325
+	532191630	Song For Rooftop Runner 02	C:\Users\Kevin\Documents\WwiseProjects\CityRunner\.cache\Mac\SFX\Song For Rooftop Runner 02_9EDFC787.wem		\Interactive Music Hierarchy\Default Work Unit\Main_Menu\Song For Rooftop Runner 02\Song For Rooftop Runner 02		1507063
 	540544863	SFX_Car_Horn_28	C:\Users\Kevin\Documents\WwiseProjects\CityRunner\.cache\Mac\SFX\SFX_Car_Horn_28_3F75BDB9.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Ambiance\Car_Horns\SFX_Car_Horn_28		20729
 	615156298	FS-005	C:\Users\Kevin\Documents\WwiseProjects\CityRunner\.cache\Mac\SFX\FS-005_3F75BDB9.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Footsteps\FS-005		2323
 	615977405	SFX_Car_Horn_27	C:\Users\Kevin\Documents\WwiseProjects\CityRunner\.cache\Mac\SFX\SFX_Car_Horn_27_3F75BDB9.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Ambiance\Car_Horns\SFX_Car_Horn_27		11400
 	620775869	SFX_Jump	C:\Users\Kevin\Documents\WwiseProjects\CityRunner\.cache\Mac\SFX\SFX_Jump_3F75BDB9.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Jump		2010
 	641567632	FS-002	C:\Users\Kevin\Documents\WwiseProjects\CityRunner\.cache\Mac\SFX\FS-002_3F75BDB9.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Footsteps\FS-002		2414
-	642446455	Falling_Whistle	C:\Users\Kevin\Documents\WwiseProjects\CityRunner\.cache\Mac\SFX\cartoon_drop_3F75BDB9.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Falling_Whistle		58726
 	662207006	SFX_Car_Horn_24	C:\Users\Kevin\Documents\WwiseProjects\CityRunner\.cache\Mac\SFX\SFX_Car_Horn_24_3F75BDB9.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Ambiance\Car_Horns\SFX_Car_Horn_24		21509
 	740195818	SFX_Car_Horn_20	C:\Users\Kevin\Documents\WwiseProjects\CityRunner\.cache\Mac\SFX\SFX_Car_Horn_20_3F75BDB9.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Ambiance\Car_Horns\SFX_Car_Horn_20		8348
-	747012289	SFX_Game_Over_Stinger	C:\Users\Kevin\Documents\WwiseProjects\CityRunner\.cache\Mac\SFX\SFX_Game_Over_Stinger_3F75BDB9.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Game_Over_Stinger		57793
 	752144095	FS-001	C:\Users\Kevin\Documents\WwiseProjects\CityRunner\.cache\Mac\SFX\FS-001_3F75BDB9.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Footsteps\FS-001		2169
 	763457563	SFX_Car_Horn_7	C:\Users\Kevin\Documents\WwiseProjects\CityRunner\.cache\Mac\SFX\SFX_Car_Horn_7_3F75BDB9.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Ambiance\Car_Horns\SFX_Car_Horn_7		9182
 	786354683	SFX_Car_Horn_18	C:\Users\Kevin\Documents\WwiseProjects\CityRunner\.cache\Mac\SFX\SFX_Car_Horn_18_3F75BDB9.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Ambiance\Car_Horns\SFX_Car_Horn_18		9308
 	816575531	SFX_Explosion	C:\Users\Kevin\Documents\WwiseProjects\CityRunner\.cache\Mac\SFX\SFX_Explosion_3F75BDB9.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Explosion		20527
 	820914468	SFX_Car_Horn_17	C:\Users\Kevin\Documents\WwiseProjects\CityRunner\.cache\Mac\SFX\SFX_Car_Horn_17_3F75BDB9.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Ambiance\Car_Horns\SFX_Car_Horn_17		12693
 	846373316	SFX_Car_Horn_11	C:\Users\Kevin\Documents\WwiseProjects\CityRunner\.cache\Mac\SFX\SFX_Car_Horn_11_3F75BDB9.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Ambiance\Car_Horns\SFX_Car_Horn_11		14085
-	871685059	Helicopter	C:\Users\Kevin\Documents\WwiseProjects\CityRunner\.cache\Mac\SFX\172667__underlineddesigns__military-rotor-loop_9EDFC787.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Helicopter		13087
 	878886696	FS-006	C:\Users\Kevin\Documents\WwiseProjects\CityRunner\.cache\Mac\SFX\FS-006_3F75BDB9.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Footsteps\FS-006		2117
 	881531476	FS-003	C:\Users\Kevin\Documents\WwiseProjects\CityRunner\.cache\Mac\SFX\FS-003_3F75BDB9.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Footsteps\FS-003		2759
 	886777713	SFX_Car_Horn_25	C:\Users\Kevin\Documents\WwiseProjects\CityRunner\.cache\Mac\SFX\SFX_Car_Horn_25_3F75BDB9.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Ambiance\Car_Horns\SFX_Car_Horn_25		22836
@@ -70,5 +64,4 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	934882911	SFX_Car_Horn_2	C:\Users\Kevin\Documents\WwiseProjects\CityRunner\.cache\Mac\SFX\SFX_Car_Horn_2_3F75BDB9.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Ambiance\Car_Horns\SFX_Car_Horn_2		6765
 	1014366094	SFX_Car_Horn_1	C:\Users\Kevin\Documents\WwiseProjects\CityRunner\.cache\Mac\SFX\SFX_Car_Horn_1 _3F75BDB9.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Ambiance\Car_Horns\SFX_Car_Horn_1		5857
 	1029506877	SFX_Dumpster	C:\Users\Kevin\Documents\WwiseProjects\CityRunner\.cache\Mac\SFX\SFX_Dumpster_3F75BDB9.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Dumpster		27795
-	1054376750	Song For Rooftop Runner	C:\Users\Kevin\Documents\WwiseProjects\CityRunner\.cache\Mac\SFX\Song For Rooftop Runner_9EDFC787.wem		\Interactive Music Hierarchy\Default Work Unit\Main_Menu\Song For Rooftop Runner\Song For Rooftop Runner		1522636
 
