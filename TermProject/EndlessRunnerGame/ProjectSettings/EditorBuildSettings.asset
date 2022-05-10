@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/CityRunner.unity
     guid: e6f33ad261acedb4589545bccda80a17
+  - enabled: 1
+    path: Assets/Scenes/GameOver.unity
+    guid: c5d6030e206b7cb45addfddcde93948f
   m_configObjects: {}

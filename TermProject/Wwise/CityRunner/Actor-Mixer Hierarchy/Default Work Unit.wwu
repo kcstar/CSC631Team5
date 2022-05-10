@@ -1967,6 +1967,88 @@
 								<ActiveSource Name="VO_Death_1" ID="{8B29D074-E6FE-4781-9A71-12B016AE7229}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
+						<Sound Name="Falling_Whistle" ID="{717D8B1C-EE08-4215-98DC-0C4F3F0077F6}" ShortID="441269007">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B3583AF1-8D28-4F4D-B419-193D520874E1}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{DD87CA62-7EBB-4464-9491-E586973CBA5C}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="cartoon_drop" ID="{60210AE1-B451-4604-8C63-6B42B0692006}">
+									<Language>SFX</Language>
+									<AudioFile>cartoon_drop.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="642446455"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="cartoon_drop" ID="{60210AE1-B451-4604-8C63-6B42B0692006}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Helicopter" ID="{1A984747-97E0-4105-8739-97AC0A23CA5F}" ShortID="945652439">
+							<PropertyList>
+								<Property Name="Highpass" Type="int16">
+									<ValueList>
+										<Value>20</Value>
+									</ValueList>
+								</Property>
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-15</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B3583AF1-8D28-4F4D-B419-193D520874E1}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{DD87CA62-7EBB-4464-9491-E586973CBA5C}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="172667__underlineddesigns__military-rotor-loop" ID="{7DEBE041-F278-41B7-A24B-F940AD977377}">
+									<Language>SFX</Language>
+									<AudioFile>172667__underlineddesigns__military-rotor-loop.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="871685059"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="172667__underlineddesigns__military-rotor-loop" ID="{7DEBE041-F278-41B7-A24B-F940AD977377}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="SFX_Game_Over_Stinger" ID="{1D996975-46C9-4CB9-8CBA-3D50BB0D430A}" ShortID="36052548">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B3583AF1-8D28-4F4D-B419-193D520874E1}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{DD87CA62-7EBB-4464-9491-E586973CBA5C}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="SFX_Game_Over_Stinger" ID="{E659AB32-DBA8-444F-BC09-F43A3B2D3BF1}">
+									<Language>SFX</Language>
+									<AudioFile>SFX_Game_Over_Stinger.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="747012289"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="SFX_Game_Over_Stinger" ID="{E659AB32-DBA8-444F-BC09-F43A3B2D3BF1}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
 					</ChildrenList>
 					<ObjectLists/>
 				</ActorMixer>

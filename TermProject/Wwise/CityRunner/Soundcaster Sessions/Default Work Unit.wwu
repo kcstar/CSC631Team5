@@ -38,6 +38,10 @@
 							<Position X="2" Y="1"/>
 						</Module>
 						<Module>
+							<ObjectRef Name="Play_Falling_Whistle" ID="{B2FAA644-7AE1-4F26-A74D-920D2969FD8F}" WorkUnitID="{9FB5C3DD-0BF6-47C9-B621-FF1086A18E67}"/>
+							<Position X="2" Y="2"/>
+						</Module>
+						<Module>
 							<ObjectRef Name="Play_SFX_Coin" ID="{6FCD3CA1-5DF9-49D9-B215-EC67AF14B3B3}" WorkUnitID="{9FB5C3DD-0BF6-47C9-B621-FF1086A18E67}"/>
 							<Position X="3" Y="0"/>
 						</Module>
@@ -46,12 +50,20 @@
 							<Position X="3" Y="1"/>
 						</Module>
 						<Module>
+							<ObjectRef Name="Play_SFX_Game_Over_Stinger" ID="{0A1D1F78-3A45-40DB-91E9-8B891EDD752D}" WorkUnitID="{9FB5C3DD-0BF6-47C9-B621-FF1086A18E67}"/>
+							<Position X="3" Y="2"/>
+						</Module>
+						<Module>
 							<ObjectRef Name="Play_SFX_Dumpster" ID="{790950C9-67FB-458B-9108-0D1716637BDA}" WorkUnitID="{9FB5C3DD-0BF6-47C9-B621-FF1086A18E67}"/>
 							<Position X="4" Y="0"/>
 						</Module>
 						<Module>
 							<ObjectRef Name="Play_SFX_Throw" ID="{9AD1B336-B228-4581-829D-F1C77DF4B8D4}" WorkUnitID="{9FB5C3DD-0BF6-47C9-B621-FF1086A18E67}"/>
 							<Position X="4" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Play_Helicopter" ID="{947D73AB-6913-42F0-AFA4-0075B4673AAC}" WorkUnitID="{9FB5C3DD-0BF6-47C9-B621-FF1086A18E67}"/>
+							<Position X="4" Y="2"/>
 						</Module>
 					</ModuleList>
 					<RTPCValueList ShowAll="true"/>
