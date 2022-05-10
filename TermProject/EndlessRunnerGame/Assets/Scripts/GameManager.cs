@@ -66,10 +66,9 @@ public class GameManager : MonoBehaviour
                 GameObject playerObject = players[args.user_id];
                 // Move the player
                 Player playerScript = playerObject.GetComponent<Player>();
-                playerScript.position = new Vector3(args.posX, args.posY, args.posZ);
-                playerScript.velocity = new Vector3(args.velX, args.velY, args.velZ);
-                playerScript.walkSpeed = args.walkSpeed;
-                playerScript.MoveDirection = new Vector3(args.walkX, 0, args.walkZ);
+                playerScript.position = new Vector3(args.posX, args.posY, playerScript.position.z);
+                playerScript.velocity = new Vector3(args.velX, args.velY, playerScript.velocity.z);
+                playerScript.inputX = args.inputX;
                 playerScript.jumping = args.jumping;
             } else {
                 Debug.Log("Couldn't find the other players!");

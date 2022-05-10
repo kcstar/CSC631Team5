@@ -39,26 +39,31 @@ public class MainMenu : MonoBehaviour
     }
 
     public void OnPlayPressed() {
+        AkSoundEngine.PostEvent("Play_SFX_Menu_Confirm", this.gameObject);
         TweenTo(playCamera);
         playMenu.SetActive(true);
         mainMenu.SetActive(false);
     }
     
     public void OnExitPressed() {
+        AkSoundEngine.PostEvent("Play_SFX_Menu_Confirm", this.gameObject);
         Application.Quit();
     }
 
     public void OnBackPressed() {
+        AkSoundEngine.PostEvent("Play_SFX_Menu_Confirm", this.gameObject);
         TweenTo(menuCamera);
         playMenu.SetActive(false);
         mainMenu.SetActive(true);
     }
     public void OnLocalPressed() {
+        AkSoundEngine.PostEvent("Play_SFX_Menu_Confirm", this.gameObject);
         networkConfig.hostIP = Constants.LOCAL_HOST;
         networkConfig.hostPort = Constants.REMOTE_PORT;
         sceneLoader.allowSceneActivation = true;
     }
     public void OnOnlinePressed() {
+        AkSoundEngine.PostEvent("Play_SFX_Menu_Confirm", this.gameObject);
         networkConfig.hostIP = Constants.REMOTE_HOST;
         networkConfig.hostPort = Constants.REMOTE_PORT;
         sceneLoader.allowSceneActivation = true;
