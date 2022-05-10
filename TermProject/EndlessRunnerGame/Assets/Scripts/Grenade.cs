@@ -44,7 +44,7 @@ public class Grenade : MonoBehaviour
         }
         Instantiate(explosionEffect, transform.position, transform.rotation);
         
-
+        AkSoundEngine.PostEvent("Play_SFX_Explosion", this.gameObject);
         Destroy(gameObject);
     }
 
