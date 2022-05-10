@@ -26,13 +26,17 @@ public class PlayerControl : MonoBehaviour
     public float respawnHeight;
     private int requestNumber = 0;
 
+    private int health = 3;
+    private bool noHealth = false;
+
     void Start()
     {
         spawnPos = gameObject.transform.position;
 		networkManager = GameObject.Find("Network Manager").GetComponent<NetworkManager>();
         humanoid = gameObject.GetComponent<Player>();
         gameplayUI = UI.GetComponent<GameplayUI>();
-		//DontDestroyOnLoad(gameObject);
+        //DontDestroyOnLoad(gameObject);
+        
     }
 
     // Update is called once per frame
@@ -46,6 +50,12 @@ public class PlayerControl : MonoBehaviour
             humanoid.velocity = new Vector3();
             SceneManager.LoadScene("GameOver");
         }
+
+        if (noHealth)
+        {
+            SceneManager.LoadScene("GameOver");
+        }
+
 
         float horizontal = Input.GetAxisRaw("Horizontal");
         float vertical = Input.GetAxisRaw("Vertical");
@@ -76,8 +86,11 @@ public class PlayerControl : MonoBehaviour
         gameplayUI.updateDistance(distance);
     }
 
+
+
     private void onTriggerEnter(Collider other)
     {
+       
         if (other.gameObject.layer == 9)
         {
             Destroy(other.gameObject);
@@ -87,7 +100,16 @@ public class PlayerControl : MonoBehaviour
 
     public void OnCollisionEnter(Collision node)
     {
-
+        if(node.gameObject.tag == "Grenade")
+            {
+            Debug.Log("COLLIDED WITH GRENADE");
+            health -= 1;
+            if (health <= 0)
+            {
+                noHealth = true;
+            }
+            print(health);
+        }
         if ((node.gameObject.tag == "Coin") && (coinCollected == false))
         {
             Debug.Log("COLLIDED WITH COIN");
