@@ -29,7 +29,7 @@ public class RequestJoin extends GameRequest {
 
     @Override
     public void parse() throws IOException {
-        //no parsing for this request
+        // Eventually parse a game_id or auto-assign one
     }
 
     @Override
