@@ -24,7 +24,6 @@ public class Player : MonoBehaviour
     private float jumpBegan = 0;
     private float playerInfluence = 0.3f;
     private Boolean grounded = false;
-    private Vector3 previousPosition;
     private float stickiness = 10f;
 
     
@@ -33,7 +32,6 @@ public class Player : MonoBehaviour
 
     void Start()
     {
-        previousPosition = transform.position;
         rigidBodyComponent = GetComponent<Rigidbody>();
         Physics.gravity = new Vector3(0, -40.0F, 0);
         stickmanAnimator = gameObject.transform.Find("stickman").GetComponent<PlayerController>();
@@ -46,7 +44,6 @@ public class Player : MonoBehaviour
 
         
         stickmanAnimator.SetSpeed(ApplyStickiness(stickmanAnimator.GetSpeed(), rigidBodyComponent.velocity.x));
-        Vector3 deltaPosition = (transform.position - previousPosition) / Time.deltaTime;
         //rigidBodyComponent.velocity = ApplyStickiness(rigidBodyComponent.velocity, new Vector3((1.0f + playerInfluence * inputX) * walkSpeed, rigidBodyComponent.velocity.y, 0));
         rigidBodyComponent.velocity = new Vector3((1.0f + playerInfluence * inputX) * walkSpeed, rigidBodyComponent.velocity.y, 0);
 
@@ -78,8 +75,6 @@ public class Player : MonoBehaviour
         } else {
             jumpBegan = 0;
         }
-
-        previousPosition = transform.position;
     }
 
     private Vector3 ApplyStickiness(Vector3 from, Vector3 to) {
