@@ -4,8 +4,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-
-
 public class PlayerControl : MonoBehaviour
 {
     [SerializeField] private Transform startPosition;
@@ -26,7 +24,7 @@ public class PlayerControl : MonoBehaviour
     private bool coinCollected = false;
     public float respawnHeight;
     private int requestNumber = 0;
-    private int health = 3;
+    private int health = 10;
     private bool noHealth = false;
 
     void Start()
@@ -35,7 +33,6 @@ public class PlayerControl : MonoBehaviour
         humanoid = gameObject.GetComponent<Player>();
         gameplayUI = UI.GetComponent<GameplayUI>();
         //DontDestroyOnLoad(gameObject);
-        
     }
 
     // Update is called once per frame
@@ -53,6 +50,7 @@ public class PlayerControl : MonoBehaviour
             // AkSoundEngine.PostEvent("Play_SFX_Dumpster", this.gameObject);
             // humanoid.position = spawnPos;
             Damage();
+            Respawn();
         }
 
         float horizontal = Input.GetAxisRaw("Horizontal");
@@ -79,12 +77,12 @@ public class PlayerControl : MonoBehaviour
             movementChanged = false;
             requestNumber++;
         }
+
         distance = Mathf.Abs(startPosition.position.x - GameObject.Find("Player").transform.position.x);
         gameplayUI.updateCoin(coinCount);
         gameplayUI.updateDistance(distance);
         gameplayUI.updateHealth(health);
     }
-
 
     /*
     private void onTriggerEnter(Collider other)
@@ -97,9 +95,9 @@ public class PlayerControl : MonoBehaviour
         }
     }
     */
+
     public void Damage() {
         health--;
-        Respawn();
     }
 
     public void Respawn() {
@@ -115,6 +113,7 @@ public class PlayerControl : MonoBehaviour
             Damage();
             print(health);
         }
+
         if ((node.gameObject.tag == "Coin") && (coinCollected == false))
         {
             Debug.Log("COLLIDED WITH COIN");
@@ -134,6 +133,7 @@ public class PlayerControl : MonoBehaviour
         }
         */
     }
+
     /*
     public void OnCollisionExit(Collision node)
     {

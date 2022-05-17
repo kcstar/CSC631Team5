@@ -24,7 +24,7 @@ MonoBehaviour:
     ParentPath: Virtual Acoustics\Default Work Unit
     guid: d2bd25442f88f94c84aea22df2087b30
     GuidInternal: 
-    m_lastTime: -8585496398503786644
+    m_lastTime: -8585494661457891390
     List: []
   AuxBusWwu:
   - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
@@ -38,7 +38,7 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy\Default Work Unit
     guid: 62ca87ddbb7e64449491e586973cba5c
     GuidInternal: 
-    m_lastTime: -8585496398505451926
+    m_lastTime: -8585494661505498453
     List:
     - name: Master Audio Bus
       guid: d8a41415a61d2a41a17e75ca0c2149f3
@@ -100,7 +100,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: 09e84aec1a2fdb49bbaadeb07c6bf23e
     GuidInternal: 
-    m_lastTime: -8585496398503806648
+    m_lastTime: -8585494661457981409
     List:
     - name: Official
       guid: be3823f525d70840b87fe51effc25128
@@ -128,7 +128,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: ddc3b59ff60bc947b621ff1086a18e67
     GuidInternal: 
-    m_lastTime: -8585496398505726986
+    m_lastTime: -8585493908052609111
     List:
     - name: Play_Ambiance
       guid: 60356778ae286d40976e634bd31a6daf
@@ -144,6 +144,23 @@ MonoBehaviour:
         ObjectType: 3
         guid: 60356778ae286d40976e634bd31a6daf
       Path: Events\Default Work Unit\Play_Ambiance
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_Falling_Whistle
+      guid: 44a6fab2e17a264fa74d920d2969fd8f
+      id: 1379027492
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: ddc3b59ff60bc947b621ff1086a18e67
+      - ElementName: Play_Falling_Whistle
+        ObjectType: 3
+        guid: 44a6fab2e17a264fa74d920d2969fd8f
+      Path: Events\Default Work Unit\Play_Falling_Whistle
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -178,6 +195,23 @@ MonoBehaviour:
         ObjectType: 3
         guid: 5e64f50376d3274da751eda6597588eb
       Path: Events\Default Work Unit\Play_Gameplay
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_Helicopter
+      guid: ab737d941369f042afa40075b4673aac
+      id: 774814993
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: ddc3b59ff60bc947b621ff1086a18e67
+      - ElementName: Play_Helicopter
+        ObjectType: 3
+        guid: ab737d941369f042afa40075b4673aac
+      Path: Events\Default Work Unit\Play_Helicopter
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -246,6 +280,23 @@ MonoBehaviour:
         ObjectType: 3
         guid: ce407f9860ce8149bbf7818143138553
       Path: Events\Default Work Unit\Play_SFX_Explosion
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_SFX_Game_Over_Stinger
+      guid: 781f1d0a453adb4091e98b891edd752d
+      id: 2797469750
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: ddc3b59ff60bc947b621ff1086a18e67
+      - ElementName: Play_SFX_Game_Over_Stinger
+        ObjectType: 3
+        guid: 781f1d0a453adb4091e98b891edd752d
+      Path: Events\Default Work Unit\Play_SFX_Game_Over_Stinger
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -368,6 +419,23 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
+    - name: Stop_Helicopter
+      guid: 494c4da611433c49bc258aca514024e4
+      id: 3999941067
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: ddc3b59ff60bc947b621ff1086a18e67
+      - ElementName: Stop_Helicopter
+        ObjectType: 3
+        guid: 494c4da611433c49bc258aca514024e4
+      Path: Events\Default Work Unit\Stop_Helicopter
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
     - name: Stop_Main_Menu
       guid: 7b9f630db7fa6548b6be08e7fe0cd67f
       id: 774860123
@@ -397,7 +465,7 @@ MonoBehaviour:
     ParentPath: Game Parameters\Default Work Unit
     guid: 65758225983e1e43bd6d152a5e502952
     GuidInternal: 
-    m_lastTime: -8585496398505721986
+    m_lastTime: -8585494661506488394
     List: []
   StateWwu:
   - PhysicalPath: States\Default Work Unit.wwu
@@ -411,7 +479,7 @@ MonoBehaviour:
     ParentPath: States\Default Work Unit
     guid: ba8a7aaf85e4af4e8346ef6327d6c6e1
     GuidInternal: 
-    m_lastTime: -8585496398503801648
+    m_lastTime: -8585494661457931381
     List: []
   SwitchWwu:
   - PhysicalPath: Switches\Default Work Unit.wwu
@@ -425,7 +493,7 @@ MonoBehaviour:
     ParentPath: Switches\Default Work Unit
     guid: c17e19b5388aa941966512d210151490
     GuidInternal: 
-    m_lastTime: -8585496398503796646
+    m_lastTime: -8585494661457921388
     List: []
   TriggerWwu:
   - PhysicalPath: Triggers\Default Work Unit.wwu
@@ -439,7 +507,7 @@ MonoBehaviour:
     ParentPath: Triggers\Default Work Unit
     guid: 0335604697e5f044b3575522e2e34885
     GuidInternal: 
-    m_lastTime: -8585496398503791647
+    m_lastTime: -8585494661457901388
     List: []
   ExpandedFileSystemItemIds: 
   ExpandedWaapiItemIds: 
