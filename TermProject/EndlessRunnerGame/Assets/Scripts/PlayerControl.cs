@@ -4,11 +4,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-
-
 public class PlayerControl : MonoBehaviour
 {
     [SerializeField] private Transform startPosition;
+    public GameObject spawn;
     [SerializeField] private Canvas UI;
     private GameplayUI gameplayUI;
     private Vector3 spawnPos;
@@ -25,18 +24,15 @@ public class PlayerControl : MonoBehaviour
     private bool coinCollected = false;
     public float respawnHeight;
     private int requestNumber = 0;
-
-    private int health = 3;
+    private int health = 10;
     private bool noHealth = false;
 
     void Start()
     {
-        spawnPos = gameObject.transform.position;
 		networkManager = GameObject.Find("Network Manager").GetComponent<NetworkManager>();
         humanoid = gameObject.GetComponent<Player>();
         gameplayUI = UI.GetComponent<GameplayUI>();
         //DontDestroyOnLoad(gameObject);
-        
     }
 
     // Update is called once per frame
@@ -46,16 +42,15 @@ public class PlayerControl : MonoBehaviour
             noHealth = true;
             Debug.Log($"Distance is {distance}");
             Debug.Log($"Died with {coinCount} coins");
-            coinCount = 0;
             SceneManager.LoadScene("GameOver");
         }
 
         if (gameObject.transform.position.y < respawnHeight) {
             // AkSoundEngine.PostEvent("Play_Falling_Whistle", this.gameObject);
             // AkSoundEngine.PostEvent("Play_SFX_Dumpster", this.gameObject);
-            humanoid.position = spawnPos;
-            humanoid.velocity = new Vector3();
-            health--;
+            // humanoid.position = spawnPos;
+            Damage();
+            Respawn();
         }
 
         float horizontal = Input.GetAxisRaw("Horizontal");
@@ -82,14 +77,14 @@ public class PlayerControl : MonoBehaviour
             movementChanged = false;
             requestNumber++;
         }
+
         distance = Mathf.Abs(startPosition.position.x - GameObject.Find("Player").transform.position.x);
         gameplayUI.updateCoin(coinCount);
         gameplayUI.updateDistance(distance);
         gameplayUI.updateHealth(health);
     }
 
-
-
+    /*
     private void onTriggerEnter(Collider other)
     {
        
@@ -99,15 +94,26 @@ public class PlayerControl : MonoBehaviour
             superJumpsRemaining++;
         }
     }
+    */
+
+    public void Damage() {
+        health--;
+    }
+
+    public void Respawn() {
+        humanoid.position = spawn.transform.position + new Vector3(0, 2 - spawn.transform.localScale.y/2, 0);
+        humanoid.velocity = new Vector3();
+    }
 
     public void OnCollisionEnter(Collision node)
     {
         if(node.gameObject.tag == "Grenade")
             {
             Debug.Log("COLLIDED WITH GRENADE");
-            health -= 1;
+            Damage();
             print(health);
         }
+
         if ((node.gameObject.tag == "Coin") && (coinCollected == false))
         {
             Debug.Log("COLLIDED WITH COIN");
@@ -117,7 +123,17 @@ public class PlayerControl : MonoBehaviour
             Destroy(node.gameObject);
             coinCollected = false;
         }
+
+        /*
+        if ((node.gameObject.tag == "Spawn"))
+        {
+            Debug.Log("COLLIDED WITH SPAWN");
+            spawn = node.gameObject;
+            node.gameObject.GetComponent<BoxCollider>().enabled = false;
+        }
+        */
     }
+
     /*
     public void OnCollisionExit(Collision node)
     {
